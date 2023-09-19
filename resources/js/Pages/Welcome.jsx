@@ -1,10 +1,11 @@
-import { Head } from '@inertiajs/react'
+import AdminLayout from "../Layout/AdminLayout";
+
 import React from 'react'
 
 export default function Welcome() {
   return (
-        <div>
-            Tes
-        </div>
+    <AdminLayout>
+      Tes
+    </AdminLayout>
   )
 }
