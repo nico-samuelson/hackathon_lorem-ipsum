@@ -1,6 +1,6 @@
 /.phpunit.cache
 /node_modules
-# /public/build
+/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -17,3 +17,14 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+
+# Routing Inertia Render
+vendor/*
+!vendor/inertiajs/
+vendor/inertiajs/*
+!vendor/inertiajs/inertia-laravel/
+vendor/inertiajs/inertia-laravel/*
+!vendor/inertiajs/inertia-laravel/src/
+vendor/inertiajs/inertia-laravel/src/*
+!vendor/inertiajs/inertia-laravel/src/Response.php
