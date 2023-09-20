@@ -1,0 +1,18 @@
+{
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome-edac4ecf.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Welcome.jsx"
+  },
+  "resources/js/app.jsx": {
+    "dynamicImports": [
+      "resources/js/Pages/Welcome.jsx"
+    ],
+    "file": "assets/app-c02a58e2.js",
+    "isEntry": true,
+    "src": "resources/js/app.jsx"
+  }
+}

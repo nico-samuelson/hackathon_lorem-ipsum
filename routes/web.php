@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     // dd('tes');/
     return Inertia::render('Welcome', [
         'title' => 'Tes'
