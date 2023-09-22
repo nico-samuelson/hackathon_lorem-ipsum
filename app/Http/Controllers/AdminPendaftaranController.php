@@ -13,4 +13,10 @@ class AdminPendaftaranController extends Controller
         $data['members'] = $memberController->getAll()->toArray();
         return view('admin-pendaftaran', $data);
     }
+
+    public function updateStatus(Request $request) {
+        $memberController = new MemberController(new Member());
+        $memberController->updatePartial(['status' => $request->status], $request->id);
+        return response()->json(['message' => 'Berhasil mengubah status member!']);
+    }
 }

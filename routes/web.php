@@ -9,6 +9,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\AssetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,12 +47,18 @@ Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
 
-Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin-pendaftaran');
+Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin.pendaftaran');
+Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::class,'updateStatus'])->name('admin.pendaftaran.update-status');
+
 // Inspeksi Kambing
 Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view');
 Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
 
+// Add Produk
+Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view');
+Route::post('/add-produk/proses',[ProdukController::class,'addProdukProses'])->name('add-produk-proses');
 
 // Assets
 Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');
 Route::get('/assets/foto_kambing/{path}',[AssetController::class,'foto_kambing'])->name('assets.foto_kambing');
+Route::get('/assets/foto_produk/{path}',[AssetController::class,'foto_produk'])->name('assets.foto_produk');
