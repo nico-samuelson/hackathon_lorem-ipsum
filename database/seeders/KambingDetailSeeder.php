@@ -17,10 +17,11 @@ class KambingDetailSeeder extends Seeder
     {
         $kambings = Kambing::all();
         $members = Member::all()->pluck('id');
+        // dd($members);
         for($i = 0; $i < 100; $i++) {
             KambingDetail::create([
-                'id_kambing' => $kambings[$i]->id,
-                'member_id' => array_rand($members->toArray()),
+                'kambing_id' => $kambings[$i]->id,
+                'member_id' => $members[array_rand($members->toArray())],
                 'file_kontrak' => '/kontrak',
                 'file_kontrak_signed' => '/kontrak_signed',
             ]);

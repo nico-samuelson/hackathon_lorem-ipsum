@@ -20,10 +20,11 @@ class CheckingHistorySeeder extends Seeder
 
         for($i = 0; $i < 200; $i++) {
             CheckingHistory::create([
-                'kambing_id' => array_rand($kambing->toArray()),
-                'inspektur_id' => array_rand($inspektur->toArray()),
+                'kambing_id' => $kambing[array_rand($kambing->toArray())],
+                'inspektur_id' => $inspektur[array_rand($inspektur->toArray())],
                 'status' => array_rand([0, 1]),
                 'keterangan' => fake()->sentence(),
+                'foto' => fake()->imageUrl(),
             ]);
         }
     }
