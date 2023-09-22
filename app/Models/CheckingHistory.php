@@ -23,6 +23,7 @@ class CheckingHistory extends Model
         'inspektur_id',
         'status',
         'keterangan',
+        'foto'
     ]; 
 
     /**
@@ -37,6 +38,7 @@ class CheckingHistory extends Model
             'inspektur_id' => 'required|uuid|exists:inspekturs,id',
             'status' => 'required|integer|in:0,1',
             'keterangan' => 'nullable|string',
+            'foto' => 'required|string'
         ];
     }
 
@@ -58,6 +60,7 @@ class CheckingHistory extends Model
             'status.integer' => 'Status harus berupa integer!',
             'status.in' => 'Status harus bernilai 0 atau 1!',
             'keterangan.string' => 'Keterangan harus berupa string!',
+            'foto.required' => 'Tolong masukkan Foto!'
         ];
     }
 
@@ -73,6 +76,7 @@ class CheckingHistory extends Model
             'inspektur_id' => $request->inspektur_id,
             'status' => $request->status,
             'keterangan' => $request->keterangan,
+            'foto' => $request->foto
         ]);
     }
 

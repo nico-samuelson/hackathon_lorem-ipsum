@@ -35,7 +35,7 @@ class Kambing extends Model
         return [
             'gender' => 'required|integer|in:0,1',
             'tanggal_lahir' => 'required|date',
-            'no_kambing' => 'required|integer',
+            'no_kambing' => 'required|integer|unique:kambings,no_kambing',
             'hamil' => 'required|integer|in:0,1',
         ];
     }
@@ -55,6 +55,7 @@ class Kambing extends Model
             'tanggal_lahir.date' => 'Tanggal Lahir dalam bentuk tanggal!',
             'no_kambing.required' => 'Tolong masukkan No Kambing!',
             'no_kambing.integer' => 'No Kambing dalam bentuk angka!',
+            'no_kambing.unique' => 'No Kambing sudah ada!',
             'hamil.required' => 'Tolong masukkan Hamil!',
             'hamil.integer' => 'Hamil dalam bentuk angka!',
             'hamil.in' => 'Hamil hanya bisa 0 atau 1!',
