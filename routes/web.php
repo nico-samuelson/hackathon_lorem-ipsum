@@ -30,3 +30,13 @@ Route::get('/pesan',[PesanController::class,'index'])->name('pesan');
 // daftar member
 Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view');
 Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses');
+
+Route::get('/login', [MemberController::class, 'login'])->name('login');
+Route::post('/login', [MemberController::class, 'login_process'])->name('login.process');
+Route::match(['get', 'post'], '/logout', [MemberController::class, 'logout'])->name('logout');
+
+Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('member.dashboard');
+
+// Add Kambing
+Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
+Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
