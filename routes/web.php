@@ -51,7 +51,6 @@ Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView
 Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
 
 
-
 // Assets
 Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');
 Route::get('/assets/foto_kambing/{path}',[AssetController::class,'foto_kambing'])->name('assets.foto_kambing');
