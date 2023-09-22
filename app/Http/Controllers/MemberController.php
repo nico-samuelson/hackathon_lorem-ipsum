@@ -17,17 +17,6 @@ class MemberController extends BaseController
     }
 
     public function login() {
-        // $req = new Request();
-        // $this->store($req->merge([
-        //     'no_ktp' => '1234567890',
-        //     'nama' => "Nico",
-        //     'alamat' => 'woyyyy',
-        //     'no_hp' => '123456789',
-        //     'email' => 'nico@gmail.com',
-        //     'password' => bcrypt('123456789'),
-        //     'foto_ktp' => '/dummy',
-        //     'status' => 1,
-        // ]));
         return view('login', [
             'title' => 'Login'
         ]);
@@ -48,6 +37,7 @@ class MemberController extends BaseController
                 session(['id_user' => $user[0]->id]);
                 session(['email' => $user[0]->email]);
                 session(['nama' => $user[0]->nama]);
+                session(['isInspektur' => false]);
                 return redirect()->route('home');
             } 
         } 
@@ -56,6 +46,7 @@ class MemberController extends BaseController
                 session(['id_user' => $admin[0]->id]);
                 session(['email' => $admin[0]->email]);
                 session(['nama' => $admin[0]->nama]);
+                session(['isInspektur' => true]);
                 return redirect()->route('dashboard');
             } 
         }
@@ -71,7 +62,7 @@ class MemberController extends BaseController
     public function dashboard() {
         $kambingDetail = new KambingDetailController(new KambingDetail());
 
-        dd($kambingDetail->getAll(['member_id' => session('id_user')]));
+        // dd($kambingDetail->getAll(['member_id' => session('id_user')]));
 
         return view('member_dashboard', [
             'title' => 'Member Dashboard',
