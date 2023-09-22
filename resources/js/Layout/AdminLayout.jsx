@@ -142,7 +142,7 @@ const AdminLayout = ({ children }) => {
                                 background: colorBgContainer,
                             }}
                         >
-                            content
+                            {children}
                         </div>
                     </Content>
                 </Layout>
