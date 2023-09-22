@@ -54,7 +54,7 @@ class BaseController extends Controller
      */
     public function getValidationRules()
     {
-        return $this->model->validationRules;
+        return $this->model->validationRules();
     }
 
     /**
@@ -63,7 +63,7 @@ class BaseController extends Controller
      */
     public function getValidationMessages()
     {
-        return $this->model->validationMessages;
+        return $this->model->validationMessages();
     }
 
     /**
@@ -74,7 +74,7 @@ class BaseController extends Controller
     {
         $requestFillable = $request->only($this->model->getFillable());
 
-        $valid = Validator::make($requestFillable, $this->model->validationRules, $this->model->validationMessages);
+        $valid = Validator::make($requestFillable, $this->model->validationRules(), $this->model->validationMessages());
         if($valid->fails()){
             return ['error' => $valid->errors()];
         }
@@ -90,7 +90,7 @@ class BaseController extends Controller
     {
         $requestFillable = $request->only($this->model->getFillable());
 
-        $valid = Validator::make($requestFillable, $this->model->validationRules, $this->model->validationMessages);
+        $valid = Validator::make($requestFillable, $this->model->validationRules(), $this->model->validationMessages());
         if($valid->fails()){
             return ['error' => $valid->errors()];
         }
@@ -106,7 +106,7 @@ class BaseController extends Controller
     {
         $requestFillable = $request->only($this->model->getFillable());
 
-        $valid = Validator::make($requestFillable, $this->model->validationRules, $this->model->validationMessages);
+        $valid = Validator::make($requestFillable, $this->model->validationRules(), $this->model->validationMessages());
         if($valid->fails()){
             return ['error' => $valid->errors()];
         }
