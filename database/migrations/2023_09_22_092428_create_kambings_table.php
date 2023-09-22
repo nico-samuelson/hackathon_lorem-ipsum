@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kambing',function(Blueprint $table) {
+        Schema::create('kambings',function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->integer('gender')->comment("0: jantan, 1: betina");
             $table->date('tanggal_lahir');
