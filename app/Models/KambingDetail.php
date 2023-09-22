@@ -22,6 +22,7 @@ class KambingDetail extends Model
         'kambing_id',
         'member_id',
         'file_kontrak',
+        'file_kontrak_signed',
         'status',
     ]; 
 
@@ -94,7 +95,7 @@ class KambingDetail extends Model
     */
     public function relations()
     {
-        return ['kambings', 'member'];
+        return ['kambing', 'member'];
     }
 
     /**
@@ -107,7 +108,7 @@ class KambingDetail extends Model
         return $this->belongsTo(Member::class);
     }
 
-    public function kambings()
+    public function kambing()
     {
         return $this->belongsTo(Kambing::class);
     }
