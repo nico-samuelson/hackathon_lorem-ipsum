@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->integer('gender')->comment("0: jantan, 1: betina");
             $table->date('tanggal_lahir');
-            $table->integer('no_kambing');
+            $table->integer('no_kambing')->unique();
             $table->integer('hamil')->comment("0: tidak, 1: ya");
             $table->timestamps();
             $table->softDeletes();

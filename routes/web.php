@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\DaftarMemberController;
 use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
@@ -24,5 +25,12 @@ Route::get('/', function() {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
 
 Route::get('/pesan',[PesanController::class,'index'])->name('pesan');
+
+// daftar member
 Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view');
 Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses');
+
+
+// Add Kambing
+Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
+Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
