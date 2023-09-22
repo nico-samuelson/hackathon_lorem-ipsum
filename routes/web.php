@@ -20,3 +20,5 @@ Route::get('/home', function () {
         'title' => 'Tes'
     ]);
 })->name('home');
+
+Route::get('/pesan',[PesanController::class,'index'])->name('pesan');

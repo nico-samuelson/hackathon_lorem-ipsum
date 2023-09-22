@@ -15,8 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('nama');
             $table->string('harga');
-            $table->string('deskripsi');
-            $table->string('foto');
+            $table->text('deskripsi');
+            $table->text('foto');
             $table->timestamps();
             $table->softDeletes();
         });
