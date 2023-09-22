@@ -36,6 +36,8 @@ Route::post('/login', [MemberController::class, 'login_process'])->name('login.p
 Route::match(['get', 'post'], '/logout', [MemberController::class, 'logout'])->name('logout');
 
 Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('member.dashboard');
+Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.kambing');
+Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak');
 
 // Add Kambing
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
