@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('member_id')->references('id')->on('members');
             $table->text('file_kontrak');
             $table->text('file_kontrak_signed')->nullable();
+            $table->integer('status')->comment("0: tidak aktif, 1: aktif");
             $table->timestamps();
             $table->softDeletes();
         });
