@@ -19,4 +19,4 @@ Route::get('/home', function () {
     return Inertia::render('Welcome', [
         'title' => 'Tes'
     ]);
-});
+})->name('home');
