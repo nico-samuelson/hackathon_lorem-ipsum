@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PesanController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    // dd('tes');/
-    return Inertia::render('Welcome', [
-        'title' => 'Tes'
-    ]);
+Route::get('/', function() {
+    return view('welcome', ['title' => 'Etawa']);
 })->name('home');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
 
 Route::get('/pesan',[PesanController::class,'index'])->name('pesan');

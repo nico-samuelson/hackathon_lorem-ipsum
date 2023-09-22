@@ -57,6 +57,7 @@
 </head>
 <body>
 
+    @include('layouts.sidebar')
     <main class="h-full">
         @yield('content')
     </main>
