@@ -37,6 +37,7 @@ export default function MainLayout({ children }) {
             </Head>
 
             {/* <MobileContextProvider> */}
+            
             {children}
             {/* </MobileContextProvider> */}
         </ConfigProvider>

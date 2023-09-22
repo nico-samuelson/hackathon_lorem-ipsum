@@ -1,7 +1,7 @@
 import { Head } from "@inertiajs/react";
 import MainLayout from "../Layout/MainLayout";
-import React, { useContext, useState } from "react";
-import { ConfigProvider, Row, Col, Card, Image, Space } from "antd";
+import { ConfigProvider, Row, Col, Card, Image, Space, Button } from "antd";
+import { PlusCircleFilled, MinusCircleFilled } from "@ant-design/icons";
 import {
     DownloadOutlined,
     RotateLeftOutlined,
@@ -10,15 +10,46 @@ import {
     ZoomInOutlined,
     ZoomOutOutlined,
 } from "@ant-design/icons";
+import React from "react";
+import { useState } from "react";
 
 export default function Pesan({ produk }) {
-    const { isMobile, setIsMobile } = useState(null);
-    const { cart, setCart } = useState([]);
+    const [productsCount, setProductsCount] = useState(
+        Array.from(Array(produk.length).fill(0))
+    );
 
-    console.log(isMobile);
-    window.onresize = () => {
-        setIsMobile(window.innerWidth < 768);
+    const addItem = (idx) => {
+        setProductsCount((prev) => {
+            let newProductsCount = [...prev];
+            newProductsCount[idx]++;
+            return newProductsCount;
+        });
     };
+
+    const hargaToInt = (harga) => {
+        let newHarga = harga.slice(4);
+        newHarga = newHarga.replace(".", "");
+        return parseInt(newHarga);
+    };
+
+    const removeItem = (idx) => {
+        setProductsCount((prev) => {
+            let newProductsCount = [...prev];
+            newProductsCount[idx]--;
+            return newProductsCount;
+        });
+    };
+
+    let totalPrice = 0;
+    produk.map((p, idx) => {
+        totalPrice += hargaToInt(p.harga) * productsCount[idx];
+    });
+
+    let chat = "halo ngab ak mau beli\n";
+    produk.map((item, idx) => {
+        chat += `${productsCount[idx]} ${item.nama}\n`;
+    });
+
     const src =
         "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png";
     const onDownload = () => {
@@ -46,8 +77,8 @@ export default function Pesan({ produk }) {
                             padding: 0 !important;
                         }
                         #produk{
-                            margin-left: 10%;
-                            margin-right:10%;
+                            margin-left: 6%;
+                            margin-right:4%;
                         }
                         #container{
                             margin-top: 6vh;
@@ -56,28 +87,64 @@ export default function Pesan({ produk }) {
                             margin-bottom: 2vh;
                         }
                         .image-produk{
-                            width:19vw !important;
-                            height:19vw !important;
+                            width:220px !important;
+                            height:220px !important;
                         }
                         .harga-produk{
                             text-align:right;
                         }
+                        .total-card {
+                            height: 250px;
+                            margin-right: 6%;
+                            font-size: 26px;
+                            margin-bottom: 20px;
+                        }
+                        .button-pesan-sekarang {
+                            margin-right: 6%;
+                        }
+                        .gradient-bg {
+                            background: linear-gradient(to bottom, #F39A25, #F4C21E);
+                            border-radius: 30pt 30pt 0 0;
+                        }
+
+
+                        @media (max-width: 992px) {
+                            #produk {
+                                margin-right: 6%;
+                            }
+                            .total-card {
+                                margin-inline: 12%; 
+                            }
+                            .button-pesan-sekarang {
+                                margin-inline: 12%;
+                            }
+                        }
+
+                        @media (max-width: 576px) {
+                            .total-card {
+                                font-size: 20px;
+                            }
+                        }
                     `}
                 </style>
             </Head>
+                <div className="gradient-bg" style={{ position: 'absolute', top: '50%', height: `${350*produk.length}px`, width: '100vw' }}></div>
             <MainLayout>
                 <Row id="container">
-                    <Col span={16}>
+                    <Col xs={{ span: 24 }} lg={{ span: 16 }}>
                         <div id="produk">
                             {produk.map((item, index) => (
                                 <Card
                                     bordered={false}
                                     className="produk-card"
-                                    style={{}}
+                                    style={{ backgroundColor: "#FCD75F" }}
                                     key={index}
                                 >
                                     <Row>
-                                        <Col span={10}>
+                                        <Col
+                                            xs={{ span: 24 }}
+                                            md={{ span: 10 }}
+                                        >
                                             <div id="image-container">
                                                 <Image
                                                     className="image-produk"
@@ -153,7 +220,10 @@ export default function Pesan({ produk }) {
                                                 />
                                             </div>
                                         </Col>
-                                        <Col span={14}>
+                                        <Col
+                                            xs={{ span: 24 }}
+                                            md={{ span: 14 }}
+                                        >
                                             <div id="detail-container">
                                                 <h1>{item.nama}</h1>
                                                 <p>
@@ -170,7 +240,58 @@ export default function Pesan({ produk }) {
                                                 <h2 className="harga-produk">
                                                     {item.harga}
                                                 </h2>
-                                                <div className="btn-quantity"></div>
+                                                <div
+                                                    className="btn-quantity"
+                                                    style={{
+                                                        display: "flex",
+                                                        justifyItems: "center",
+                                                        float: "right",
+                                                    }}
+                                                >
+                                                    <MinusCircleFilled
+                                                        style={{
+                                                            fontSize: "45px",
+                                                        }}
+                                                        onClick={() =>
+                                                            removeItem(index)
+                                                        }
+                                                    />
+                                                    <div
+                                                        style={{
+                                                            display: "flex",
+                                                            marginInline:
+                                                                "24px",
+                                                        }}
+                                                    >
+                                                        <span
+                                                            style={{
+                                                                marginBlock:
+                                                                    "auto",
+                                                                fontSize:
+                                                                    "28px",
+                                                                fontWeight:
+                                                                    "400",
+                                                            }}
+                                                        >
+                                                            {
+                                                                productsCount[
+                                                                    index
+                                                                ]
+                                                            }
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <PlusCircleFilled
+                                                            style={{
+                                                                fontSize:
+                                                                    "45px",
+                                                            }}
+                                                            onClick={() =>
+                                                                addItem(index)
+                                                            }
+                                                        />
+                                                    </div>
+                                                </div>
                                             </div>
                                         </Col>
                                     </Row>
@@ -178,8 +299,59 @@ export default function Pesan({ produk }) {
                             ))}
                         </div>
                     </Col>
-                    <Col span={8}>
-                        <div id="total">Ini Sidebar</div>
+                    <Col xs={{ span: 24 }} lg={{ span: 8 }}>
+                        <Card
+                            bordered={false}
+                            className="total-card"
+                            style={{ backgroundColor: "#FCD75F" }}
+                        >
+                            <div>
+                                <div style={{ marginBottom: "80px" }}>
+                                    <div style={{ fontWeight: "550" }}>
+                                        Total :
+                                    </div>
+                                    <div style={{ fontWeight: "400" }}>
+                                        {productsCount.reduce(
+                                            (partialSum, a) => partialSum + a,
+                                            0
+                                        )}{" "}
+                                        Produk
+                                    </div>
+                                </div>
+                                <div
+                                    style={{
+                                        float: "right",
+                                        fontWeight: "500",
+                                    }}
+                                >
+                                    Rp{totalPrice.toLocaleString("id-ID")}
+                                </div>
+                            </div>
+                        </Card>
+                        <a
+                            href={
+                                "https://wa.me/6281332050695/?" +
+                                new URLSearchParams({ text: chat })
+                            }
+                        >
+                            <div
+                                style={{ marginBottom: "28px" }}
+                                className="button-pesan-sekarang"
+                            >
+                                <Button
+                                    block
+                                    style={{
+                                        fontWeight: "400",
+                                        fontSize: "18px",
+                                        height: "40px",
+                                        backgroundColor: "#EB8600",
+                                        color: "#ffffff",
+                                    }}
+                                >
+                                    Pesan Sekarang
+                                </Button>
+                            </div>
+                        </a>
                     </Col>
                 </Row>
             </MainLayout>

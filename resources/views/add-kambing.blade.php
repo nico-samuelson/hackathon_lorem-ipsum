@@ -11,7 +11,7 @@
                     <label class="font-serif ml-2 text-form" for="nama">
                         No Kambing
                     </label>
-                    <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Nomer Kambing ..." name="no_kambing" id="no_kambing">
+                    <input type="number" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Nomer Kambing ..." name="no_kambing" id="no_kambing">
                 </div>
                 <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
                     <label class="font-serif ml-2 text-form" for="nik">Tanggal Lahir</label>

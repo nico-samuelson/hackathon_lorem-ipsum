@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPendaftaranController;
 use App\Http\Controllers\DaftarMemberController;
 use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
@@ -7,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AddKambingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +44,14 @@ Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.
 // Add Kambing
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
+
+Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin-pendaftaran');
+// Inspeksi Kambing
+Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view');
+Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
+
+
+
+// Assets
+Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');
+Route::get('/assets/foto_kambing/{path}',[AssetController::class,'foto_kambing'])->name('assets.foto_kambing');
