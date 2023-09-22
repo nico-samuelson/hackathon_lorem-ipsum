@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\AssetController;
 
 /*
 |--------------------------------------------------------------------------

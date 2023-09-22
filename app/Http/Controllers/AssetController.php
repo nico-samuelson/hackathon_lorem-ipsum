@@ -10,7 +10,7 @@ class AssetController extends Controller
     public function ktp($path)
     {
         if(Storage::disk('public')->exists("images/ktp/".$path)){
-            $content = Storage::disk('public')->get('image/ktp'.$path);
+            $content = Storage::disk('public')->get('images/ktp/'.$path);
             $mime = explode('.',$path)[1];
             $array_mime     = [
                 'css'   => 'text/css',
@@ -55,7 +55,7 @@ class AssetController extends Controller
     public function foto_kambing($path)
     {
         if(Storage::disk('public')->exists("images/foto_kambing/".$path)){
-            $content = Storage::disk('public')->get('image/foto_kambing'.$path);
+            $content = Storage::disk('public')->get('images/foto_kambing/'.$path);
             $mime = explode('.',$path)[1];
             $array_mime     = [
                 'css'   => 'text/css',
@@ -100,7 +100,7 @@ class AssetController extends Controller
     public function foto_produk($path)
     {
         if(Storage::disk('public')->exists("images/foto_produk/".$path)){
-            $content = Storage::disk('public')->get('image/foto_produk'.$path);
+            $content = Storage::disk('public')->get('images/foto_produk/'.$path);
             $mime = explode('.',$path)[1];
             $array_mime     = [
                 'css'   => 'text/css',

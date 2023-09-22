@@ -22,7 +22,11 @@
 @endsection
 
 @section("content")
-<section class="my-8">
+<section class="sm:my-6 my-5 border-b-2 border-double pb-3">
+    <h1 class="sm:pl-32 pl-16 sm:text-5xl text-xl font-bold sm:mb-2 text-form">LIST OF PENDAFTAR</h1>
+</section>
+
+<section class="my-8 px-10 py-5">
     <div class="overflow-x-auto">
         <table id="tabel-pendaftar" class="table-auto overflow-scroll w-full min-w-[800px]">
             <thead>
@@ -54,7 +58,18 @@
                     <td>
                         {{ $member['username'] }}
                     </td>
-                    <td></td>
+                    <td>
+                        <button
+                        type="button"
+                        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] h-full"
+                        data-te-toggle="modal"
+                        data-te-target="#staticBackdrop"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        onclick="changeModal('View KTP','{{ route('assets.ktp',$member['foto_ktp']) }}')">
+                        View KTP
+                        </button>
+                    </td>
                     <td>
                         <form action="">
                             <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
@@ -153,6 +168,58 @@
         </div>
     </div>
 </section>
+<div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="staticBackdrop"
+    data-te-backdrop="static"
+    data-te-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
+        <div
+        class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+        <div
+            class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+            <!--Modal title-->
+            <h5
+            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+            id="viewTitle" style="transition: all ease-in-out">
+            Modal title
+            </h5>
+        </div>
+
+        <!--Modal body-->
+        <div data-te-modal-body-ref class="relative p-4">
+            <div class="flex justify-content-center align-items-center w-full">
+                <img
+                    src=""
+                    class="m-auto h-auto max-w-sm rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30 dark:shadow-none dark:hover:shadow-lg dark:hover:shadow-white/30 border"
+                    alt="" 
+                    id="viewImage"
+                    style="transition: all ease-in-out;"/>
+            </div>
+        </div>
+
+        <!--Modal footer-->
+        <div
+            class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+            <button
+            type="button"
+            class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            data-te-modal-dismiss
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            onclick="changeModal('','')">
+            Close
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('script')
@@ -206,5 +273,9 @@
         //     console.log(data);
         // });
     });
+    function changeModal(title,src){
+        $("#viewTitle").html(title);
+        $("#viewImage").attr("src",src);
+    }
 </script>
 @endsection
