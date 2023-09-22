@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('no_hp');
             $table->string('email');
-            $table->string('username');
+            $table->string('username')->unique();
             $table->text('password');
             $table->text('foto_ktp');
             $table->integer('status')->comment('0: daftar, 1: aktif, 2: nonaktif');
