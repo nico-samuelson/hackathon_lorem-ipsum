@@ -381,11 +381,11 @@
                 <li>3</li>
             </ul>
 
-            {{-- <div class="flex justify-center"> --}}
-            <button class="inline-block md:hidden justify-center rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
-                Gabung Sekarang
-            </button>
-            {{-- </div> --}}
+            <div class="flex justify-center">
+                <button class="inline-block justify-center rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
+                    Gabung Sekarang
+                </button>
+            </div>
         </section>
     </div>
     @endsection
