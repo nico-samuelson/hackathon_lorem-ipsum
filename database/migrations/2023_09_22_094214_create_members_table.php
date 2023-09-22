@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('no_ktp');
-            $table->string('nama lengkap');
+            $table->string('nama');
             $table->string('alamat');
             $table->string('no_hp');
             $table->string('email');

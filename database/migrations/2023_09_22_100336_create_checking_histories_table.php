@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kambing_details',function(Blueprint $table){
+        Schema::create('checking_histories', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('kambing_id');
             $table->foreign('kambing_id')->references('id')->on('kambings');
-            $table->uuid('member_id');
-            $table->foreign('member_id')->references('id')->on('members');
-            $table->text('file_kontrak');
-            $table->text('file_kontrak_signed')->nullable();
+            $table->uuid('inspektur_id');
+            $table->foreign('inspektur_id')->references('id')->on('inspekturs');
+            $table->integer('status')->comment('0: sehat, 1: sakit');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kambing_details');
+        Schema::dropIfExists('checking_histories');
     }
 };

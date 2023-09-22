@@ -109,7 +109,7 @@ class Inspektur extends Model
     */
     public function relations()
     {
-        return [];
+        return ['checking_histories'];
     }
 
     /**
@@ -117,4 +117,8 @@ class Inspektur extends Model
     *
     *
     */
+    public function checking_histories()
+    {
+        return $this->hasMany(CheckingHistory::class);
+    }
 }

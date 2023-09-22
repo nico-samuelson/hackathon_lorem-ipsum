@@ -20,7 +20,7 @@ class Member extends Model
      */
     protected $fillable=[
         'no_ktp',
-        'nama lengkap',
+        'nama',
         'alamat',
         'no_hp',
         'email',
@@ -38,7 +38,7 @@ class Member extends Model
     {
         return [
             'no_ktp' => 'required|string',
-            'nama lengkap' => 'required|string',
+            'nama' => 'required|string',
             'alamat' => 'required|string',
             'no_hp' => 'required|integer',
             'email' => 'required|string',
@@ -59,8 +59,8 @@ class Member extends Model
         return [
             'no_ktp.required' => 'Tolong masukkan No KTP!',
             'no_ktp.string' => 'No KTP dalam bentuk string!',
-            'nama lengkap.required' => 'Tolong masukkan Nama Lengkap!',
-            'nama lengkap.string' => 'Nama Lengkap dalam bentuk string!',
+            'nama.required' => 'Tolong masukkan Nama!',
+            'nama.string' => 'Nama dalam bentuk string!',
             'alamat.required' => 'Tolong masukkan Alamat!',
             'alamat.string' => 'Alamat dalam bentuk string!',
             'no_hp.required' => 'Tolong masukkan No HP!',
@@ -86,14 +86,15 @@ class Member extends Model
     public function resourceData($request)
     {
         return ModelUtils::filterNullValues([
-            'no_ktp',
-            'nama lengkap',
-            'alamat',
-            'no_hp',
-            'email',
-            'username',
-            'password',
-            'foto_ktp',
+            'no_ktp' => $request->no_ktp,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_hp' => $request->no_hp,
+            'email' => $request->email,
+            'username' => $request->username,
+            'password' => $request->password,
+            'foto_ktp' => $request->foto_ktp,
+            'status' => $request->status,
         ]);
     }
 
@@ -116,7 +117,9 @@ class Member extends Model
     */
     public function relations()
     {
-        return [];
+        return [
+            'kambing_details',
+        ];
     }
 
     /**
@@ -124,4 +127,8 @@ class Member extends Model
     *
     *
     */
+    public function kambing_details()
+    {
+        return $this->hasMany('App\Models\KambingDetail');
+    }
 }

@@ -69,10 +69,10 @@ class Kambing extends Model
     public function resourceData($request)
     {
         return ModelUtils::filterNullValues([
-            'gender',
-            'tanggal_lahir',
-            'no_kambing',
-            'hamil',
+            'gender' => $request->gender,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_kambing' => $request->no_kambing,
+            'hamil' => $request->hamil,
         ]);
     }
 
@@ -95,7 +95,7 @@ class Kambing extends Model
     */
     public function relations()
     {
-        return [];
+        return ['kambing_details', 'checking_histories'];
     }
 
     /**
@@ -103,4 +103,13 @@ class Kambing extends Model
     *
     *
     */
+    public function kambing_details()
+    {
+        return $this->hasMany('App\Models\KambingDetail');
+    }
+    public function checking_histories()
+    {
+        return $this->hasMany('App\Models\CheckingHistory');
+    }
+
 }
