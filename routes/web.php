@@ -4,7 +4,6 @@ use App\Http\Controllers\DaftarMemberController;
 use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PesanController;
 use App\Http\Controllers\DashboardController;
 
 /*
