@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Kambing;
+use App\Models\Inspektur;
 use App\Models\CheckingHistory;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,7 +16,7 @@ class CheckingHistorySeeder extends Seeder
     public function run(): void
     {
         $kambing = Kambing::all()->pluck('id');
-        $inspektur = Insepkur::all()->pluck('id');
+        $inspektur = Inspektur::all()->pluck('id');
 
         for($i = 0; $i < 200; $i++) {
             CheckingHistory::create([
