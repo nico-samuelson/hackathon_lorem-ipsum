@@ -22,6 +22,7 @@ class KambingDetail extends Model
         'kambing_id',
         'member_id',
         'file_kontrak',
+        'status',
     ]; 
 
     /**
@@ -35,6 +36,7 @@ class KambingDetail extends Model
             'kambing_id' => 'required|uuid|exists:kambings,id',
             'member_id' => 'required|uuid|exists:members,id',
             'file_kontrak' => 'required|string',
+            'status' => 'required',
         ];
     }
 
@@ -54,6 +56,7 @@ class KambingDetail extends Model
             'member_id.exists' => 'Member ID tidak ditemukan!',
             'file_kontrak.required' => 'Tolong masukkan File Kontrak!',
             'file_kontrak.string' => 'File Kontrak harus berupa string!',
+            'status.required' => 'Tolong masukkan Status!',
         ];
     }
 
@@ -68,6 +71,7 @@ class KambingDetail extends Model
             'kambing_id' => $request->kambing_id,
             'member_id' => $request->member_id,
             'file_kontrak' => $request->file_kontrak,
+            'status' => $request->status,
         ]);
     }
 
