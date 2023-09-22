@@ -18,7 +18,16 @@ class DaftarMemberController extends Controller
     {
         $data['title'] = "Daftar Member";
 
-        return view('daftar-member',$data);
+        if(!session('applied')){
+            session(['applied' => 'false']);
+            return view('daftar-member',['title' => 'Daftar Member']);
+        }else{
+            if(session('applied') == 'true'){
+                return view('daftar-applied',['title' => 'Already Applied!']);
+            }else{
+                return view('daftar-member',['title' => 'Daftar Member']);
+            }
+        } 
     }
 
     public function proses(Request $request)
@@ -41,7 +50,7 @@ class DaftarMemberController extends Controller
         // Safe KTP File
         $file = $request->file('ktp');
         $hash = md5($file->getClientOriginalName().time());
-        $fileName = "KTP_".$request['no_ktp']."_".$hash.$file->getClientOriginalExtension();
+        $fileName = "KTP_".$request['no_ktp']."_".$hash.".".$file->getClientOriginalExtension();
         if(!$file->storePubliclyAs('images/ktp',$fileName,'public')){
             return ['error' => 'Gagal menyimpan foto KTP!'];
         }
@@ -50,6 +59,7 @@ class DaftarMemberController extends Controller
         $return = $this->memberController->store($request);
         // dd($return);
         if(!isset($return['error'])){
+            session(['applied' => 'true']);
             return ['success' => 'Berhasil mendaftar!'];
         }else{
             return ['error' => 'Gagal mendaftar!'];
