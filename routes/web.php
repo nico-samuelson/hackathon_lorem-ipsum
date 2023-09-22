@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DaftarMemberController;
+use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesanController;
@@ -23,3 +25,5 @@ Route::get('/', function() {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
 
 Route::get('/pesan',[PesanController::class,'index'])->name('pesan');
+Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view');
+Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses');

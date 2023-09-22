@@ -40,12 +40,11 @@ class Member extends Model
             'no_ktp' => 'required|string',
             'nama' => 'required|string',
             'alamat' => 'required|string',
-            'no_hp' => 'required|integer',
+            'no_hp' => 'required|string',
             'email' => 'required|string',
             'username' => 'required|string',
             'password' => 'required|string',
             'foto_ktp' => 'required|string',
-            'status' => 'required|integer',
         ];
     }
 
@@ -64,7 +63,7 @@ class Member extends Model
             'alamat.required' => 'Tolong masukkan Alamat!',
             'alamat.string' => 'Alamat dalam bentuk string!',
             'no_hp.required' => 'Tolong masukkan No HP!',
-            'no_hp.integer' => 'No HP dalam bentuk angka!',
+            'no_hp.string' => 'No HP dalam bentuk string!',
             'email.required' => 'Tolong masukkan Email!',
             'email.string' => 'Email dalam bentuk string!',
             'username.required' => 'Tolong masukkan Username!',
