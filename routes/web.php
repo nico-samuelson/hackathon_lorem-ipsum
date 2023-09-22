@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
