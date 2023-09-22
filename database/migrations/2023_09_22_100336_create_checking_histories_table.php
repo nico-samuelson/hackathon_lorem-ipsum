@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('inspektur_id')->references('id')->on('inspekturs');
             $table->integer('status')->comment('0: sehat, 1: sakit');
             $table->text('keterangan')->nullable();
+            $table->text('foto');
             $table->timestamps();
             $table->softDeletes();
         });
