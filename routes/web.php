@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPendaftaranController;
 use App\Http\Controllers\DaftarMemberController;
 use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
@@ -40,3 +41,5 @@ Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('mem
 // Add Kambing
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
+
+Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin-pendaftaran');
