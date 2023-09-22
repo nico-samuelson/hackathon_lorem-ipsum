@@ -64,5 +64,10 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#slim-content').css('padding-left', '0px');
+    });
+</script>
 @yield("script")
 </html>
