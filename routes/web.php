@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DaftarMemberController;
 use App\Http\Controllers\PesanController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::get('/pesan',[PesanController::class,'index'])->name('pesan');
+Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view');
+Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses');

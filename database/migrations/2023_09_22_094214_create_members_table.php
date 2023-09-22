@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('username');
             $table->text('password');
             $table->text('foto_ktp');
-            $table->integer('status')->comment('0: daftar, 1: aktif, 2: nonaktif');
+            $table->integer('status')->default('0')->comment('0: daftar, 1: aktif, 2: nonaktif');
             $table->timestamps();
             $table->softDeletes();
         });
