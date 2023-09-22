@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Inertia\Inertia;
+use App\Models\Testing;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +18,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    // dd('tes');/
-    return Inertia::render('Welcome', [
-        'title' => 'Tes'
-    ]);
-})->name('home');
+Route::get('/alur', [HomeController::class, 'alur'])->name('alur');
