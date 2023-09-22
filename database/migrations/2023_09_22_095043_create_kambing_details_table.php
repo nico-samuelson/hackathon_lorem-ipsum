@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kambing',function(Blueprint $table) {
+        Schema::create('kambing_details',function(Blueprint $table){
             $table->uuid('id')->primary();
-            $table->integer('gender')->comment("0: jantan, 1: betina");
-            $table->date('tanggal_lahir');
-            $table->integer('no_kambing');
-            $table->integer('hamil')->comment("0: tidak, 1: ya");
+            $table->uuid('kambing_id');
+            $table->foreign('kambing_id')->references('id')->on('kambings');
+            $table->uuid('member_id');
+            $table->foreign('member_id')->references('id')->on('members');
+            $table->text('file_kontrak');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kambing');
+        Schema::dropIfExists('kambing_details');
     }
 };

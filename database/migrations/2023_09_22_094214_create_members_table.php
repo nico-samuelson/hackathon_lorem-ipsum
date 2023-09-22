@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('foto_ktp');
             $table->integer('status')->comment('0: daftar, 1: aktif, 2: nonaktif');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
