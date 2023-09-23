@@ -75,6 +75,7 @@ export default function Pesan({ produk }) {
                         html, body {
                             margin: 0 !important;
                             padding: 0 !important;
+                            overflow-x: hidden !important;
                         }
                         #produk{
                             margin-left: 6%;

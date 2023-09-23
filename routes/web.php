@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\RiwayatKambingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,8 +55,10 @@ Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->na
 Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::class,'updateStatus'])->name('admin.pendaftaran.update-status')->middleware('checkAccess:inspektur');
 
 // Inspeksi Kambing
-Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view')->middleware('checkAccess:inspektur');
-Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses')->middleware('checkAccess:inspektur');
+Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view');
+Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
+Route::get('/riwayat-kambing', [RiwayatKambingController::class, 'index'])->name('riwayat-kambing')->middleware('checkAccess:inspektur');
+
 
 // Add Produk
 Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view')->middleware('checkAccess:inspektur');
