@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\KambingController;
 use App\Http\Controllers\RiwayatKambingController;
 
 /*
@@ -46,7 +47,9 @@ Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.
 Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak')->middleware('checkAccess:user');
 Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->name('member.upload_kontrak')->middleware('checkAccess:user');
 
-// Add Kambing
+// Kambing
+Route::get('/kambing', [KambingController::class,'kambing'])->name('all-kambing')->middleware('checkAccess:inspektur');
+Route::delete('/kambing/{id}', [KambingController::class, 'setMeninggal'])->name('set-kambing-meninggal')->middleware('checkAccess:inspektur');
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view')->middleware('checkAccess:inspektur');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses')->middleware('checkAccess:inspektur');
 

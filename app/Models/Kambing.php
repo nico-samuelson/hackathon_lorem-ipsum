@@ -8,12 +8,13 @@ use App\Models\CheckingHistory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Kambing extends Model
 {
     use HasFactory;
     use HasUuids;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
