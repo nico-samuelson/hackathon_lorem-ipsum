@@ -20,13 +20,17 @@
             background: linear-gradient(to bottom, #F39A25, #F4C21E);
             border-radius: 30pt 30pt 0 0;
         }
+        #speedo{
+            transform-origin: bottom center;
+            transition: all 10ms ease-in-out;
+        }
     </style>
 @endsection
 
 @section('content')
     {{-- Timeline --}}
     <section class="w-full py-10 timeline">
-        <h1 class="ml-5 mb-5 text-xl md:text-2xl font-bold text-neutral-700 dark:text-neutral-300 justify-start text-left md:text-center">
+        <h1 class="ml-5 md:mb-12 mb-5 text-xl md:text-5xl font-bold text-neutral-700 dark:text-neutral-300 justify-start text-left md:text-center">
             ALUR <span style="color:#F4C21E">PENGOLAHAN</span><br> PRODUK SUSU ETAWA
         </h1>
 
@@ -36,9 +40,9 @@
                 <li class="me-10">
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
-                        class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
+                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
                     <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        1. Pemeliharaan Kambing
+                        Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -50,7 +54,8 @@
                     data-te-toggle="modal"
                     data-te-target="#exampleModal"
                     data-te-ripple-init
-                    data-te-ripple-color="light">
+                    data-te-ripple-color="light"
+                    >
                     learn more
                     </button>
     
@@ -82,9 +87,9 @@
                 <li class="me-10">
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
-                        class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
+                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
                     <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        2. Pemeliharaan Kambing
+                        Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -128,9 +133,9 @@
                 <li class="me-10">
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
-                        class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
+                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
                     <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        3. Pemeliharaan Kambing
+                        Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -174,9 +179,9 @@
                 <li>
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
-                        class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
+                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
                     <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        4. Pemeliharaan Kambing
+                        Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -216,6 +221,15 @@
                     </div>
                 </li>
             </ol>
+        </div>
+        <div class="justify-centermt-40 lg:flex hidden">
+            <div class="mx-auto">
+                <svg width="38" height="200" viewBox="0 0 78 549" fill="none" xmlns="http://www.w3.org/2000/svg" id="speedo">
+                    <path d="M39.2959 0L60 478H16.5L39.2959 0Z" fill="#4F3411"/>
+                    <circle cx="39" cy="510" r="39" fill="#4F3411"/>
+                    <path d="M63.5 509.5C63.5 522.147 52.812 532.5 39.5 532.5C26.188 532.5 15.5 522.147 15.5 509.5C15.5 496.853 26.188 486.5 39.5 486.5C52.812 486.5 63.5 496.853 63.5 509.5Z" stroke="#F4C21E" stroke-width="3"/>
+                </svg>
+            </div>
         </div>
     </section>
 
@@ -388,4 +402,25 @@
             </div>
         </section>
     </div>
-    @endsection
+@endsection
+@section('script')
+<script>
+    var cursor = document.getElementById("speedo");
+    document.body.addEventListener("mousemove", function(e) {
+        var y_now = e.clientY;
+        var x_now = e.clientX;
+        var y_max = window.innerHeight;
+        var x_max = window.innerWidth;
+        var degree_min = -55;
+        var degree_max = 55;
+        if(y_now < 0) y_now = 0;
+        if(y_now > y_max ) y_now = y_max;
+        if(x_now < 0) x_now = 0;
+        if(x_now > x_max ) x_now = x_max;
+        var part1 = Math.sqrt(Math.pow(x_now, 2) + Math.pow(y_now, 2));
+        var part2 = Math.sqrt(Math.pow(x_max, 2) + Math.pow(y_max, 2));
+        var degree = (part1/part2 * 110) - 55;
+        cursor.style.transform = "rotate("+degree+"deg)";
+    });
+</script>
+@endsection()
