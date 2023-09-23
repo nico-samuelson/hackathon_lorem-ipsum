@@ -74,6 +74,9 @@ class ProdukController extends BaseController
 
     public function deleteProduk(Request $request, $id)
     {
+        if (!session('isInspektur')) {
+            return abort(403);
+        }
         $this->delete($id);
         return redirect()->route('list-produk');
     }
