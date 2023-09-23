@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController;
 use App\Models\Kambing;
+use App\Models\KambingDetail;
 
 class KambingController extends BaseController
 {
@@ -17,4 +18,17 @@ class KambingController extends BaseController
         OR
         Override existing controller here...
     */
+
+    public function kambing() {
+        $kambing = $this->getAll();
+        return view('kambing', [
+            'title' => 'Detail Kambing',
+            'kambing' => $kambing
+        ]);
+    }
+
+    public function setMeninggal($id) {
+        $this->delete($id);
+        return redirect()->route('all-kambing');
+    }
 }

@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\KambingController;
 use App\Http\Controllers\RiwayatKambingController;
 
 /*
@@ -50,9 +51,11 @@ Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.
 Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak');
 Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->name('member.upload_kontrak');
 
-// Add Kambing
+// Kambing
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
+Route::get('/kambing', [KambingController::class,'kambing'])->name('all-kambing');
+Route::delete('/kambing/{id}', [KambingController::class, 'setMeninggal'])->name('set-kambing-meninggal');
 
 // Halaman Penerimaan Member
 Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin.pendaftaran');
