@@ -45,7 +45,7 @@ export default function Pesan({ produk }) {
         totalPrice += hargaToInt(p.harga) * productsCount[idx];
     });
 
-    let chat = "halo ngab ak mau beli\n";
+    let chat = "Permisi Pak/Bu, saya ingin membeli \n";
     produk.map((item, idx) => {
         chat += `${productsCount[idx]} ${item.nama}\n`;
     });

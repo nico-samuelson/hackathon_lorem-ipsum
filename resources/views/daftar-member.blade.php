@@ -87,11 +87,11 @@
                 <label class="font-serif ml-2 text-form" for="nama">
                     Nama Lengkap
                 </label>
-                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Nama Lengkap ..." name="nama" id="nama">
+                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Nama Lengkap" name="nama" id="nama">
             </div>
             <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
                 <label class="font-serif ml-2 text-form" for="nik">NIK</label>
-                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="NIK ..." name="no_ktp" id="no_ktp">
+                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="NIK" name="no_ktp" id="no_ktp">
             </div>
         </div>
         <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-5 mb-5">
@@ -99,15 +99,15 @@
                 <div class="grid grid-cols-1">
                     <div class="mb-5">
                         <label class="font-serif ml-2 text-form" for="alamat">Alamat</label>
-                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Alamat ..." name="alamat" id="alamat">
+                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Alamat" name="alamat" id="alamat">
                     </div>
                     <div class="mb-5">
                         <label class="font-serif ml-2 text-form" for="no_hp">No Handphone</label>
-                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="no_hp ..." name="no_hp" id="no_hp">
+                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="No HP" name="no_hp" id="no_hp">
                     </div>
                     <div class="">
                         <label class="font-serif ml-2 text-form" for="email">Email</label>
-                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="email ..." name="email" id="email">
+                        <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Email" name="email" id="email">
                     </div>
                 </div>
             </div>
@@ -121,16 +121,16 @@
         <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-5 mb-10">
             <div class="sm:pl-32 pl-16 sm:pr-5 pr-16">
                 <label class="font-serif ml-2 text-form" for="username">
-                    username
+                    Username
                 </label>
-                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="username ..." name="username" id="username">
+                <input type="text" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Username" name="username" id="username">
             </div>
             <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
-                <label class="font-serif ml-2 text-form" for="password">password</label>
-                <input type="password" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="password ..." name="password" id="password">
+                <label class="font-serif ml-2 text-form" for="password">Password</label>
+                <input type="password" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Password" name="password" id="password">
             </div>
         </div>
-        <div class="min-w-full flex justify-center mb-1">
+        <div class="min-w-full flex justify-center mb-6">
             <button class="rounded-md border-2 border-gray-300 sm:px-32 px-24 py-2 text-center"  id="submit">Ajukan</button>
         </div>
     </form>
