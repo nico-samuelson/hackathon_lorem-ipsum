@@ -24,6 +24,52 @@
             transform-origin: bottom center;
             transition: all 10ms ease-in-out;
         }
+        .button {
+            display: flex;
+        }
+
+        .box {
+            width: 35px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            transition: all .8s;
+            cursor: pointer;
+            position: relative;
+            background: #EB8600;
+            overflow: hidden;
+        }
+
+        .box:before {
+            content: "N";
+            position: absolute;
+            top: 0;
+            background: #4f3411;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform .4s;
+        }
+
+        .box:nth-child(2)::before {
+            transform: translateY(-100%);
+            content: 'O';
+        }
+
+        .box:nth-child(3)::before {
+            content: 'W';
+        }
+
+        .button:hover .box:before {
+            transform: translateY(0);
+        }
     </style>
 @endsection
 
@@ -38,11 +84,11 @@
             <ol class="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
                 <!--First item-->
                 <li class="me-10" data-aos="fade-right" data-aos-duration="750" >
-                    <div class="flex-start flex items-center pt-2 md:block md:pt-0">
+                    <div class="flex-start flex items-center md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0">
                     </div>
-                        <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                        <p class="md:mt-2 text-sm text-amber-950 dark:text-neutral-300">
                             START
                         </p>
                     </div>
@@ -58,7 +104,7 @@
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
-                    <!-- Button trigger modal -->
+                    <!-- .cta trigger modal -->
                     <button
                     type="button"
                     class="trigger-modal inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#F4C21E] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(244,194,30,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(59,194,30,0.1)]"
@@ -124,7 +170,7 @@
                 </li>
             </ol>
         </div>
-        <div class="justify-centermt-40 lg:flex hidden">
+        <div class="justify-center mt-40 lg:flex hidden">
             <div class="mx-auto">
                 <svg width="38" height="200" viewBox="0 0 78 549" fill="none" xmlns="http://www.w3.org/2000/svg" id="speedo">
                     <path d="M39.2959 0L60 478H16.5L39.2959 0Z" fill="#4F3411"/>
@@ -136,61 +182,70 @@
     </section>
 
     {{-- Carousel --}}
-    <div class="relative gradient-bg py-10 mb-10">
-        <section class="grid grid-cols-1 md:grid-cols-3 products p-8 md:px-32 gap-6">
+    <section class="relative gradient-bg py-10 mb-10">
+        <p class="font-bold text-xl md:text-2xl text-center">HASIL PENGOLAHAN SUSU ETAWA</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 products p-8 md:px-32 gap-6">
             @foreach($products as $p)
                 <div
                 class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] w-full p-4 overflow-x-auto">
                     <img
-                    class="w-full rounded-t-lg md:!rounded-none md:!rounded-l-lg"
+                    class="aspect-[5/3] w-full rounded-t-lg"
                     src="{{ route('assets.foto_produk', ['path' => $p['foto']]) }}"
                     alt="{{ $p['nama'] }}" />
-                    <div class="flex flex-col w-full justify-start rounded-b-lg md:rounded-none p-4 md:p-8 z-0 gap-6" style="background-color: #FCD75F">
+                    <div class="flex flex-col w-full h-full justify-start rounded-b-lg md:rounded-none p-4 md:p-8 z-0 gap-6" style="background-color: #FCD75F">
                         <p
-                            class="md:mb-2 text-xl md:text-3xl font-medium text-neutral-800 dark:text-neutral-50">
+                            class="text-xl md:text-3xl font-medium text-neutral-800 dark:text-neutral-50">
                             {{ $p['nama'] . ' - ' . $p['harga'] }}
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                class="inline-block whitespace-nowrap rounded-full px-3 py-2 text-center align-baseline text-[0.75em] font-bold leading-none"
                                 style="background-color:#EB8600">
                                     Kategori
                             </span>
                             <span
-                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                class="inline-block whitespace-nowrap rounded-full px-3 py-2 text-center align-baseline text-[0.75em] font-bold leading-none"
                                 style="background-color:#EB8600">
                                     Kategori
                             </span>
                             <span
-                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                class="inline-block whitespace-nowrap rounded-full px-3 py-2 text-center align-baseline text-[0.75em] font-bold leading-none"
                                 style="background-color:#EB8600">
                                     Kategori
                             </span>
                         </div>
-                        <div class="flex mt-5">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quia reiciendis inventore tenetur odit non accusantium consectetur quo vero! Adipisci, aliquam ea culpa dolorum temporibus sunt possimus maiores aliquid quod veniam ipsum sequi? Pariatur consequuntur incidunt voluptatum distinctio ipsa. Dolorum quas voluptatum, facere sed obcaecati laudantium adipisci iusto expedita autem.</p>
+                        <div class="flex">
+                            <p>{{ $p['deskripsi'] }}</p>
+                        </div>
+                        <div class="flex h-full items-end">
+                            <a href="{{ route('pesan') }}">
+                                <div class="button">
+                                    <div class="box">B</div>
+                                    <div class="box">U</div>
+                                    <div class="box">Y</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             @endforeach
-        </section>
-    
-        <section class="offers px-5 md:px-24">
+        </div>
+        <div class="offers mt-10 md:px-24">
             <div class="flex mb-10">
                 <div class="py-5 w-full flex flex-col items-center justify-center">
-                    <p class="text-3xl font-bold text-center inline-block align-middle mb-5" data-aos="zoom-in-down" data-aos-duration="750" data-aos-once="true">Gabung Sekarang dan Nantikan Keuntungannya</p>
+                    <p class="text-xl md:text-3xl font-bold text-center inline-block align-middle mb-5" data-aos="zoom-in-down" data-aos-duration="750" data-aos-once="true">Gabung Sekarang dan Nantikan Keuntungannya</p>
                     <div class="bottom-5">
-                        <button class="inline-block justify-center rounded px-10 pb-2 pt-2.5 text-lg font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
-                            Gabung Sekarang
-                        </button>
+                        <a href="{{ route('daftar-member-view') }}">
+                            <button class="inline-block justify-center rounded px-5 md:px-10 pb-2 pt-2.5 text-md md:text-lg font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
+                                Gabung Sekarang
+                            </button>
+                        </a>
                     </div>
                 </div>     
             </div>
-        </section>
+        </div>
+    </section>
 
-        
-        <p class="text-center">&#169 2023 Lorem Ipsum</p>
-    </div>
 
     <!--Verically centered modal-->
     <div
@@ -218,6 +273,7 @@
     </div>
     </div>
 @endsection
+
 @section('script')
     <script>
         var cursor = document.getElementById("speedo");

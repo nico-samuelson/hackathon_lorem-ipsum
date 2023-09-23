@@ -156,7 +156,7 @@
                         <form action="{{ route('member.upload_kontrak') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
-                                <label class="font-serif ml-2 text-form" for="file_kontrak_signed">Foto Produk</label>
+                                <label class="font-serif ml-2 text-form" for="file_kontrak_signed">File Kontrak</label>
                                 <input id="file_kontrak_signed" name="file_kontrak_signed" class="border-2 border-gray-300 rounded-md w-full form-input-border file:mr-4 sm:file:my-24 file:my-8 sm:file:mx-24 file:mx-2 
                                 file:rounded-full file:border-0
                                 file:text-sm file:font-semibold" type="file" accept=".pdf">

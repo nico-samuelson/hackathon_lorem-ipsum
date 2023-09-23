@@ -66,7 +66,7 @@ class MemberController extends BaseController
 
     public function logout(Request $request) {
         $request->session()->flush();
-        return redirect()->route('home');
+        return redirect()->route('login');
     }
 
     public function dashboard() {
