@@ -33,11 +33,11 @@
                 </p>
             </div>
 
-            <div class="rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 flex flex-col items-center p-8">
+            <div class="rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 flex flex-col items-center justify-center p-8">
                 <p class="font-bold text-center">Berdasarkan Umur</p>
                 
                 <canvas
-                data-te-chart="pie"
+                data-te-chart="bar"
                 data-te-dataset-label="Traffic"
                 data-te-labels="['0 - 3', '3 - 6', '6 - 9', '9 - 12', '>12']"
                 data-te-dataset-data="{{ '[' . $kambingUrip[0]->count . ", " . $kambingUrip[1]->count .", " . $kambingUrip[2]->count .", " . $kambingUrip[3]->count .", " . $kambingUrip[4]->count . ']'}}"
