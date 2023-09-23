@@ -50,9 +50,7 @@ export default function Pesan({ produk }) {
         chat += `${productsCount[idx]} ${item.nama}\n`;
     });
 
-    const src =
-        "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png";
-    const onDownload = () => {
+    const onDownload = (src) => {
         fetch(src)
             .then((response) => response.blob())
             .then((blob) => {
@@ -159,7 +157,7 @@ export default function Pesan({ produk }) {
                                             <div id="image-container">
                                                 <Image
                                                     className="image-produk"
-                                                    src={src}
+                                                    src={encodeURI(item.foto)}
                                                     preview={{
                                                         toolbarRender: (
                                                             _,
