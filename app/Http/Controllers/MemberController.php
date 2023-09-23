@@ -124,14 +124,9 @@ class MemberController extends BaseController
             $validated['file_kontrak_signed'] = $fileName;
             $kdModel = new KambingDetail();
             $k = $kdModel->where('file_kontrak', $request->file_kontrak)->get();
-            // dd('tes');
-
-            // dd($k);
 
             foreach($k as $kam) {
-                // dd($kam);
-                $kdModel->set(['file_kontrak_signed' => $fileName])->where('id', $kam->id);
-                dd('tes');
+                $kdModel->where('id', $kam->id)->update(['file_kontrak_signed' => $fileName]);
             }
 
             DB::commit();
