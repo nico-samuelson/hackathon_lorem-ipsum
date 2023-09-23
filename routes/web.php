@@ -48,6 +48,7 @@ Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->nam
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
 Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
 
+// Halaman Penerimaan Member
 Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin.pendaftaran');
 Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::class,'updateStatus'])->name('admin.pendaftaran.update-status');
 
@@ -58,6 +59,8 @@ Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKam
 // Add Produk
 Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view');
 Route::post('/add-produk/proses',[ProdukController::class,'addProdukProses'])->name('add-produk-proses');
+Route::get('/list-produk', [ProdukController::class, 'listProduk'])->name('list-produk');
+Route::delete('/delete-produk/{id}', [ProdukController::class, 'deleteProduk'])->name('delete-produk');
 
 // Assets
 Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');
