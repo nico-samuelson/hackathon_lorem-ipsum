@@ -95,7 +95,7 @@
             <div>
                 <a class="mx-2 my-1 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
                     href="{{ route('home') }}">
-                    <img class="mr-2" src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
+                    <img class="mr-2" src="{{ url('logo.png') }}"
                         style="height: 20px" alt="TE Logo" loading="lazy" />
                 </a>
             </div>

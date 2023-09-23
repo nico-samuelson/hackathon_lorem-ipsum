@@ -130,7 +130,7 @@
                 <input type="password" class="border-2 border-gray-300 rounded-md w-full form-input-border" placeholder="Password" name="password" id="password">
             </div>
         </div>
-        <div class="min-w-full flex justify-center mb-6">
+        <div class="min-w-full flex justify-center mb-10">
             <button class="rounded-md border-2 border-gray-300 sm:px-32 px-24 py-2 text-center"  id="submit">Ajukan</button>
         </div>
     </form>
