@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddKambingController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\RiwayatKambingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::clas
 // Inspeksi Kambing
 Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view');
 Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
+Route::get('/riwayat-kambing', [RiwayatKambingController::class, 'index'])->name('riwayat-kambing');
 
 // Add Produk
 Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view');
