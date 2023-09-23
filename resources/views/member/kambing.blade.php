@@ -21,6 +21,9 @@
 @endsection
 
 @section('content')
+    <section class="py-8 border-b-2 border-double pb-3">
+        <h1 class="sm:pl-32 pl-8 sm:text-5xl text-2xl font-bold sm:mb-2 text-form">KAMBING ANDA</h1>
+    </section>
     <section class="px-10 md:pl-32 pr-10 pt-8 gap-8">
         <div class="block w-full min-h-[10rem] rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 mt-8">
             <div class="overflow-x-auto p-6">

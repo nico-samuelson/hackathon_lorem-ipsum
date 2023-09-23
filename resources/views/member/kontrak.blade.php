@@ -21,6 +21,9 @@
 @endsection
 
 @section('content')
+    <section class="py-8 border-b-2 border-double pb-3">
+        <h1 class="sm:pl-32 pl-8 sm:text-5xl text-2xl font-bold sm:mb-2 text-form">KONTRAK ANDA</h1>
+    </section>
     <section class="px-10 md:pl-32 pr-10 pb-10 gap-8">
         <div class="block w-full min-h-[10rem] rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 mt-8">
             @if(session('success'))
@@ -42,20 +45,14 @@
                 <table id="tabel-kambing" class="table-auto overflow-scroll w-full">
                     <thead class="border-b font-medium dark:border-neutral-500">
                         <tr>
-                            <th>No Kambing</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Gender</th>
                             <th>Status</th>
                             <th>Kontrak</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($kambing as $k)
+                        @foreach($kontrak as $k)
                             <tr class="border-b dark:border-neutral-500">
-                                <td>{{ $k->kambing->no_kambing }}</td>
-                                <td>{{ $k->kambing->tanggal_lahir }}</td>
-                                <td>{{ $k->kambing->gender == 0 ? 'Jantan' : 'Betina' }}</td>
                                 @if ($k->status == 0)
                                     <td>
                                         <span
@@ -91,7 +88,7 @@
                                         data-te-target="#exampleModal"
                                         data-te-ripple-init
                                         data-te-ripple-color="light"
-                                        data-id="{{ $k->id }}">
+                                        data-kontrak="{{ $k->file_kontrak }}">
                                         Submit Kontrak Bertandatangan
                                         </button>
                                     </td>
@@ -191,14 +188,11 @@
 <script>
     $(document).ready(function() {
         $('#tabel-kambing').DataTable({
-            order: [[5, 'desc']]
+            order: [[2, 'desc']]
         });
 
         $(document.body).on('click', '#openModal', function(e) {
-            // e.preventDefault();
-            // console.log('tes')
-            $("#file_kontrak_signed").after(`<input type='hidden' id='contract_id' name="id" value="` + $(this).attr('data-id') + `">`)
-            // console.log($("#contract_id").val())
+            $("#file_kontrak_signed").after(`<input type='hidden' id='file_kontrak' name="file_kontrak" value="` + $(this).attr('data-kontrak') + `">`)
         });
     });
 </script>

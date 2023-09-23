@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 <style>
     #tabel-riwayat_wrapper {
-        width: calc(100% - 80px);
+        width: 100%;
         float: right;
         padding-inline: 30px;
         padding-bottom: 20px;
@@ -24,10 +24,14 @@
 @endsection
 
 @section('content')
-<h1 class="mx-24 text-2xl font-semibold my-6">Tabel Riwayat Kambing</h1>
-<section>
-    <div class="ms-24">
-        <table id="tabel-riwayat" class="">
+<section class="py-8 border-b-2 border-double pb-3">
+    <h1 class="sm:pl-32 pl-8 sm:text-5xl text-2xl font-bold sm:mb-2 text-form">TABEL RIWAYAT KAMBING</h1>
+</section>
+
+<section class="py-8">
+    <div
+    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:ml-32 mx-8 p-8 overflow-x-auto">
+        <table id="tabel-riwayat" class="table-auto overflow-scroll w-full min-w-[800px]">
             <thead>
                 <tr>
                     <th>Kambing</th>
