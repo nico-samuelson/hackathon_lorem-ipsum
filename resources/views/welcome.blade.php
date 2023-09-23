@@ -66,7 +66,7 @@
                     data-te-toggle="modal"
                     data-te-ripple-init
                     data-te-ripple-color="light"
-                    data-video="/storage/videos/pemelihara.mp4">
+                    data-video="/videos/pemelihara.mp4">
                     Pelajari
                     </button>
     
@@ -91,7 +91,7 @@
                     data-te-toggle="modal"
                     data-te-ripple-init
                     data-te-ripple-color="light"
-                    data-video="/storage/videos/pemerahan.mp4">
+                    data-video="/videos/pemerahan.mp4">
                     Pelajari
                     </button>
     
@@ -116,7 +116,7 @@
                     data-te-toggle="modal"
                     data-te-ripple-init
                     data-te-ripple-color="light"
-                    data-video="/storage/videos/pengolahan.mp4">
+                    data-video="/videos/pengolahan.mp4">
                     Pelajari
                     </button>
     
@@ -209,7 +209,7 @@
         <!--Modal body-->
         <div class="relative py-4 pl-3 pr-4 mx-auto">
             <video controls style="width: 97%" class="mx-auto">
-                <source src='/storage/videos/pemelihara.mp4' type="video/mp4">
+                <source src='/videos/pemelihara.mp4' type="video/mp4">
             </video>
         </div>
 
