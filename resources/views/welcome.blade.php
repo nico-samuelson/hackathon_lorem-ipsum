@@ -37,146 +37,69 @@
         <div class="flex justify-center items-center">
             <ol class="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
                 <!--First item-->
-                <li class="me-10">
+                <li class="me-10" data-aos="fade-right" data-aos-duration="750" >
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
-                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
-                        AWALL
-                    </p>
+                        class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0">
                     </div>
-                    <div class="ml-4 mt-2 pb-5 md:ml-0">
-                    <!-- Button trigger modal -->
-                    <button
-                    type="button"
-                    class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#EB8600] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(235,134,0,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)]"
-                    style="background-color: #EB8600"
-                    data-te-toggle="modal"
-                    data-te-target="#exampleModal"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                    >
-                    Pelajari
-                    </button>
-    
-                    <!-- Modal -->
-                    <div
-                    data-te-modal-init
-                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-                            <div
-                            class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-    
-                                <!--Modal body-->
-                                <div class="relative flex-auto p-4" data-te-modal-body-ref>
-                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
+                        <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                            START
+                        </p>
                     </div>
                 </li>
     
                 <!--Second item-->
-                <li class="me-10">
+                <li class="me-10" data-aos="fade-up" data-aos-duration="750" >
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
                     <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
-                         Pemeliharaan Kambing
+                        Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
                     <!-- Button trigger modal -->
                     <button
                     type="button"
-                    class="inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#F4C21E] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(244,194,30,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(59,194,30,0.1)]"
+                    class="trigger-modal inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#F4C21E] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.3),0_4px_18px_0_rgba(244,194,30,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(244,194,30,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(244,194,30,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(244,194,30,0.2),0_4px_18px_0_rgba(59,194,30,0.1)]"
                     style="background-color: #F4C21E"
                     data-te-toggle="modal"
-                    data-te-target="#exampleModal"
                     data-te-ripple-init
-                    data-te-ripple-color="light">
+                    data-te-ripple-color="light"
+                    data-video="/videos/pemelihara.mp4">
                     Pelajari
                     </button>
     
-                    <!-- Modal -->
-                    <div
-                    data-te-modal-init
-                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-                            <div
-                            class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-    
-                                <!--Modal body-->
-                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </li>
     
                 <!--Third item-->
-                <li class="me-10">
+                <li class="me-10" data-aos="fade-up" data-aos-duration="750" >
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
-                        Pemerahan Susu Kambing
-                    </p>
+                        <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                            Pemerahan Susu Kambing
+                        </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
                     <!-- Button trigger modal -->
                     <button
                     type="button"
-                    class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#FCD75F] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(252,215,95,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)]"
+                    class="trigger-modal inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#FCD75F] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.3),0_4px_18px_0_rgba(252,215,95,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(252,215,95,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(252,215,95,0.2),0_4px_18px_0_rgba(252,215,95,0.1)]"
                     style="background-color: #FCD75F; color: #4f3411"
                     data-te-toggle="modal"
-                    data-te-target="#exampleModal"
                     data-te-ripple-init
-                    data-te-ripple-color="light">
+                    data-te-ripple-color="light"
+                    data-video="/videos/pemerahan.mp4">
                     Pelajari
                     </button>
     
-                    <!-- Modal -->
-                    <div
-                    data-te-modal-init
-                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-                            <div
-                            class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-    
-                                <!--Modal body-->
-                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </li>
     
                 <!--Fourth item-->
-                <li>
+                <li data-aos="fade-left" data-aos-duration="750" >
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
@@ -188,36 +111,15 @@
                     <!-- Button trigger modal -->
                     <button
                     type="button"
-                    class="inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#E3EEB1 ] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(227,238,177,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)]"
+                    class="trigger-modal inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#E3EEB1 ] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.3),0_4px_18px_0_rgba(227,238,177,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(227,238,177,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(227,238,177,0.2),0_4px_18px_0_rgba(227,238,177,0.1)]"
                     style="background-color: #E3EEB1; color: #4f3411"
                     data-te-toggle="modal"
-                    data-te-target="#exampleModal"
                     data-te-ripple-init
-                    data-te-ripple-color="light">
+                    data-te-ripple-color="light"
+                    data-video="/videos/pengolahan.mp4">
                     Pelajari
                     </button>
     
-                    <!-- Modal -->
-                    <div
-                    data-te-modal-init
-                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-                            <div
-                            class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-    
-                                <!--Modal body-->
-                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </li>
             </ol>
@@ -235,193 +137,114 @@
 
     {{-- Carousel --}}
     <div class="relative gradient-bg py-10 mb-10">
-        <section class="products pb-10">
-            <p class="mb-5 ml-5 text-xl md:text-3xl font-bold text-left text-yellow-950 dark:text-neutral-300 md:text-center>
-                HASIL PENGOLAHAN SUSU ETAWA
-            </p>
-            <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
-                <!--Carousel indicators-->
+        <section class="grid grid-cols-1 md:grid-cols-3 products p-8 md:px-32 gap-6">
+            @foreach($products as $p)
                 <div
-                    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-                    data-te-carousel-indicators>
-                    <button
-                    type="button"
-                    data-te-target="#carouselExampleCaptions"
-                    data-te-slide-to="0"
-                    data-te-carousel-active
-                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                    aria-current="true"
-                    aria-label="Slide 1"></button>
-                    <button
-                    type="button"
-                    data-te-target="#carouselExampleCaptions"
-                    data-te-slide-to="1"
-                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                    aria-label="Slide 2"></button>
-                    <button
-                    type="button"
-                    data-te-target="#carouselExampleCaptions"
-                    data-te-slide-to="2"
-                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                    aria-label="Slide 3"></button>
-                </div>
-        
-                <!--Carousel items-->
-                <div
-                    class="relative px-5 md:px-24 w-full overflow-hidden after:clear-both after:block after:content-['']">
-                    <!--First item-->
-                    <div
-                    class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    data-te-carousel-active
-                    data-te-carousel-item
-                    style="backface-visibility: hidden">
-                    <div class="flex">
-                        <div class="w-1/2">
-                            <img
-                                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-                                class="block w-full"
-                                alt="..." />
-                        </div>
-                        
-                        <div
-                            class="w-1/2 py-5 text-bold text-left text-white ml-4">
-                            <p class="text-3xl font-semibold text-yellow-950 mb-2">Es Krim</p>
-                            <div class="inline-block justify-center rounded-lg px-5 pb-0.5 pt-0.5 text-xs font-light leading-normal text-white bg-amber-950">Original</div>
-                            <div class="inline-block justify-center rounded-lg px-5 pb-0.5 pt-0.5 text-xs font-light leading-normal text-white bg-amber-950">Gula Aren</div>
-                            <p class="text-xl text-left font-normal pt-2 overflow-y-auto overflow-x-hidden">Keterangan produk ajkjdkfajskdjfam nxdcfvgbyhnujmkdjfudufjhaijeijfhajesdifjaijfi</p>
-                            <p class="text-3xl absolute font-medium bottom-5 right-4 text-yellow-950">Rp. xx</p>
-                        </div>
-
-                    </div>
-                    
-                    </div>
-    
-                    <!--Second item-->
-                    <div
-                    class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    data-te-carousel-item
-                    style="backface-visibility: hidden">
+                class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] w-full p-4 overflow-x-auto">
                     <img
-                        src="iews/img/susu_botol.jpg"
-                        class="block w-full"
-                        alt="..." />
-                    <div
-                        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                        <h5 class="text-xl">Second slide label</h5>
-                        <p>
-                        Some representative placeholder content for the second slide.
+                    class="w-full rounded-t-lg md:!rounded-none md:!rounded-l-lg"
+                    src="{{ $p['foto'] }}"
+                    alt="{{ $p['nama'] }}" />
+                    <div class="flex flex-col w-full justify-start rounded-b-lg md:rounded-none p-4 md:p-8 z-0 gap-6" style="background-color: #FCD75F">
+                        <p
+                            class="md:mb-2 text-xl md:text-3xl font-medium text-neutral-800 dark:text-neutral-50">
+                            {{ $p['nama'] . ' - ' . $p['harga'] }}
                         </p>
-                    </div>
-                    </div>
-    
-                    <!--Third item-->
-                    <div
-                    class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    data-te-carousel-item
-                    style="backface-visibility: hidden">
-                    <img
-                        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-                        class="block w-full"
-                        alt="..." />
-                    <div
-                        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                        <h5 class="text-xl">Third slide label</h5>
-                        <p>
-                        Some representative placeholder content for the third slide.
-                        </p>
-                    </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                style="background-color:#EB8600">
+                                    Kategori
+                            </span>
+                            <span
+                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                style="background-color:#EB8600">
+                                    Kategori
+                            </span>
+                            <span
+                                class="inline-block whitespace-nowrap rounded-full mt-4 px-5 py-2 text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700"
+                                style="background-color:#EB8600">
+                                    Kategori
+                            </span>
+                        </div>
+                        <div class="flex mt-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quia reiciendis inventore tenetur odit non accusantium consectetur quo vero! Adipisci, aliquam ea culpa dolorum temporibus sunt possimus maiores aliquid quod veniam ipsum sequi? Pariatur consequuntur incidunt voluptatum distinctio ipsa. Dolorum quas voluptatum, facere sed obcaecati laudantium adipisci iusto expedita autem.</p>
+                        </div>
                     </div>
                 </div>
-        
-                <!--Carousel controls - prev item-->
-                <button
-                    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                    type="button"
-                    data-te-target="#carouselExampleCaptions"
-                    data-te-slide="prev">
-                    <span class="inline-block h-8 w-8">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-6 w-6">
-                        <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                    </span>
-                    <span
-                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                    >Previous</span
-                    >
-                </button>
-                <!--Carousel controls - next item-->
-                <button
-                    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                    type="button"
-                    data-te-target="#carouselExampleCaptions"
-                    data-te-slide="next">
-                    <span class="inline-block h-8 w-8">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-6 w-6">
-                        <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    </span>
-                    <span
-                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                    >Next</span
-                    >
-                </button>
-            </div>
+            @endforeach
         </section>
     
         <section class="offers px-5 md:px-24">
             <div class="flex mb-10">
-                <div class="flex justify-center items-center my-10">
-                    <div class="my-5 mx-5 align-middle">
-                        <p class="text-3xl font-bold inline-block align-middle mb-5">Gabung Sekarang dan Nantikan Keuntungannya</p>
-                        <div class="bottom-5">
-                            <button class="inline-block justify-center rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
-                                Gabung Sekarang
-                            </button>
-                        </div>
-
+                <div class="py-5 w-full flex flex-col items-center justify-center">
+                    <p class="text-3xl font-bold text-center inline-block align-middle mb-5" data-aos="zoom-in-down" data-aos-duration="750" data-aos-once="true">Gabung Sekarang dan Nantikan Keuntungannya</p>
+                    <div class="bottom-5">
+                        <button class="inline-block justify-center rounded px-10 pb-2 pt-2.5 text-lg font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
+                            Gabung Sekarang
+                        </button>
                     </div>
-                    
-                </div>          
+                </div>     
             </div>
         </section>
+
+        
+        <p class="text-center">&#169 2023 Lorem Ipsum</p>
+    </div>
+
+    <!--Verically centered modal-->
+    <div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-modal="true"
+    role="dialog">
+    <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+    <div
+        class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-clip-padding text-current bg-[rgba(255,255,255,.8)] outline-none">
+        <!--Modal body-->
+        <div class="relative py-4 pl-3 pr-4 mx-auto">
+            <video controls style="width: 97%" class="mx-auto">
+                <source src='/videos/pemelihara.mp4' type="video/mp4">
+            </video>
+        </div>
+
+        <!--Modal footer-->
+    </div>
+    </div>
     </div>
 @endsection
 @section('script')
-<script>
-    var cursor = document.getElementById("speedo");
-    document.body.addEventListener("mousemove", function(e) {
-        var y_now = e.clientY;
-        var x_now = e.clientX;
-        var y_max = window.innerHeight;
-        var x_max = window.innerWidth;
-        var degree_min = -55;
-        var degree_max = 55;
-        if(y_now < 0) y_now = 0;
-        if(y_now > y_max ) y_now = y_max;
-        if(x_now < 0) x_now = 0;
-        if(x_now > x_max ) x_now = x_max;
-        var part1 = Math.sqrt(Math.pow(x_now, 2) + Math.pow(y_now, 2));
-        var part2 = Math.sqrt(Math.pow(x_max, 2) + Math.pow(y_max, 2));
-        var degree = (part1/part2 * 110) - 55;
-        cursor.style.transform = "rotate("+degree+"deg)";
-    });
-</script>
+    <script>
+        var cursor = document.getElementById("speedo");
+        document.body.addEventListener("mousemove", function(e) {
+            var y_now = e.clientY;
+            var x_now = e.clientX;
+            var y_max = window.innerHeight;
+            var x_max = window.innerWidth;
+            var degree_min = -55;
+            var degree_max = 55;
+            if(y_now < 0) y_now = 0;
+            if(y_now > y_max ) y_now = y_max;
+            if(x_now < 0) x_now = 0;
+            if(x_now > x_max ) x_now = x_max;
+            var part1 = Math.sqrt(Math.pow(x_now, 2) + Math.pow(y_now, 2));
+            var part2 = Math.sqrt(Math.pow(x_max, 2) + Math.pow(y_max, 2));
+            var degree = (part1/part2 * 110) - 55;
+            cursor.style.transform = "rotate("+degree+"deg)";
+        });
+
+        $(document).ready(() => {
+            $('.trigger-modal').click(function () {
+                const videoSource = $(this).data('video');
+                $('#exampleModal video source').attr('src', videoSource);
+                $('#exampleModal video')[0].load();
+                $('#exampleModal').modal('show');
+            });
+        });
+    </script>
 @endsection()

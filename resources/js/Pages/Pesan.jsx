@@ -95,9 +95,8 @@ export default function Pesan({ produk }) {
                             text-align:right;
                         }
                         .total-card {
-                            height: 250px;
+                            height: 210px;
                             margin-right: 6%;
-                            font-size: 26px;
                             margin-bottom: 20px;
                         }
                         .button-pesan-sekarang {
@@ -129,7 +128,17 @@ export default function Pesan({ produk }) {
                     `}
                 </style>
             </Head>
-                <div className="gradient-bg" style={{ position: 'absolute', top: '50%', height: `${350*produk.length}px`, width: '100vw' }}></div>
+
+            
+            <div
+                className="gradient-bg"
+                style={{
+                    position: "absolute",
+                    top: "50%",
+                    height: `${350 * produk.length}px`,
+                    width: "100vw",
+                }}
+            ></div>
             <MainLayout>
                 <Row id="container">
                     <Col xs={{ span: 24 }} lg={{ span: 16 }}>
@@ -226,8 +235,8 @@ export default function Pesan({ produk }) {
                                             md={{ span: 14 }}
                                         >
                                             <div id="detail-container">
-                                                <h1>{item.nama}</h1>
-                                                <p>
+                                                <h1 className="text-2xl font-bold mb-2">{item.nama}</h1>
+                                                <p className="text-[13px]">
                                                     {item.deskripsi.length >=
                                                         150 &&
                                                         item.deskripsi.substring(
@@ -238,7 +247,7 @@ export default function Pesan({ produk }) {
                                                         150 && item.deskripsi}
                                                 </p>
                                                 <br></br>
-                                                <h2 className="harga-produk">
+                                                <h2 className="harga-produk text-2xl font-bold mb-2">
                                                     {item.harga}
                                                 </h2>
                                                 <div
@@ -251,7 +260,7 @@ export default function Pesan({ produk }) {
                                                 >
                                                     <MinusCircleFilled
                                                         style={{
-                                                            fontSize: "45px",
+                                                            fontSize: "40px",
                                                         }}
                                                         onClick={() =>
                                                             removeItem(index)
@@ -285,7 +294,7 @@ export default function Pesan({ produk }) {
                                                         <PlusCircleFilled
                                                             style={{
                                                                 fontSize:
-                                                                    "45px",
+                                                                    "40px",
                                                             }}
                                                             onClick={() =>
                                                                 addItem(index)
@@ -307,11 +316,11 @@ export default function Pesan({ produk }) {
                             style={{ backgroundColor: "#FCD75F" }}
                         >
                             <div>
-                                <div style={{ marginBottom: "80px" }}>
-                                    <div style={{ fontWeight: "550" }}>
+                                <div className="mb-16">
+                                    <div className="font-bold text-2xl">
                                         Total :
                                     </div>
-                                    <div style={{ fontWeight: "400" }}>
+                                    <div className="font-normal  text-2xl">
                                         {productsCount.reduce(
                                             (partialSum, a) => partialSum + a,
                                             0
@@ -320,10 +329,7 @@ export default function Pesan({ produk }) {
                                     </div>
                                 </div>
                                 <div
-                                    style={{
-                                        float: "right",
-                                        fontWeight: "500",
-                                    }}
+                                    className="float-right text-2xl font-bold pt-8"
                                 >
                                     Rp{totalPrice.toLocaleString("id-ID")}
                                 </div>

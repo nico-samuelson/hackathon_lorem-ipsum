@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="min-w-full flex justify-center mb-1">
-            <button class="rounded-md border-2 border-gray-300 sm:px-32 px-10 py-2 text-center"  id="submit">Inspeksi Kambing</button>
+            <button class="rounded-md border-2 border-gray-300 sm:px-32 px-10 py-2 text-center"  id="submit">Add Produk</button>
         </div>
     </form>
 </div>
