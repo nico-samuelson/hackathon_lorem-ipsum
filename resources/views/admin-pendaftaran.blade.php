@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 <style>
     #tabel-pendaftar_wrapper {
-        width: calc(100% - 80px);
+        width: 100%;
         float: right;
     }
 
@@ -22,12 +22,13 @@
 @endsection
 
 @section("content")
-<section class="sm:my-6 my-5 border-b-2 border-double pb-3">
-    <h1 class="sm:pl-32 pl-16 sm:text-5xl text-xl font-bold sm:mb-2 text-form">LIST OF PENDAFTAR</h1>
+<section class="py-8 border-b-2 border-double pb-3">
+    <h1 class="sm:pl-32 pl-8 sm:text-5xl text-2xl font-bold sm:mb-2 text-form">LIST OF PENDAFTAR</h1>
 </section>
 
-<section class="my-8 px-10 py-5">
-    <div class="overflow-x-auto">
+<section class="py-8">
+    <div
+    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:ml-32 mx-8 p-8 overflow-x-auto">
         <table id="tabel-pendaftar" class="table-auto overflow-scroll w-full min-w-[800px]">
             <thead>
                 <tr>

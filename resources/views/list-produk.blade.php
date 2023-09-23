@@ -4,13 +4,13 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 <style>
     #tabel-produk_wrapper {
-        width: calc(100% - 80px);
+        width: 100%;
         float: right;
         padding-inline: 30px;
     }
 
     #tabel-produk_length select {
-        width: 50px;
+        width: 70px;
     }
 
     @media (max-width: 768px) {
@@ -23,9 +23,13 @@
 @endsection
 
 @section('content')
-<h1 class="mx-24 text-2xl font-semibold mt-6">Tabel Produk</h1>
-<section class="mt-8">
-    <table id="tabel-produk">
+<div class="sm:py-10 py-5">
+    <h1 class="sm:pl-32 pl-8 sm:text-5xl text-2xl font-bold sm:mb-2 text-form">TABEL PRODUK</h1>
+</div>
+<section class="py-8">
+    <div
+    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:ml-32 mx-8 p-8 overflow-x-auto">
+    <table id="tabel-produk" class="overflow-scroll w-full min-w-[800px]">
         <thead>
             <tr>
                 <th>Nama</th>
@@ -59,6 +63,7 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 </section>
 <section>
     <div data-te-modal-init

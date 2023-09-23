@@ -30,47 +30,44 @@ Route::get('/', function() {
     return view('welcome', ['title' => 'Etawa']);
 })->name('home');
 
-Route::get('/coba', function() {
-    return view('coba-welcome', ['title' => 'Etawa']);
-})->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('checkAccess:inspektur'); 
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
-
-Route::get('/pesan',[PesanController::class,'index'])->name('pesan');
+Route::get('/pesan',[PesanController::class,'index'])->name('pesan')->middleware('checkAccess:inspektur,user,guest');
 
 // daftar member
-Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view');
-Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses');
+Route::get('/member/daftar',[DaftarMemberController::class,'index'])->name('daftar-member-view')->middleware('checkAccess:inspektur,user,guest');
+Route::post('/member/daftar/proses',[DaftarMemberController::class,'proses'])->name('daftar-member-proses')->middleware('checkAccess:inspektur,user,guest');
 
 Route::get('/login', [MemberController::class, 'login'])->name('login');
 Route::post('/login', [MemberController::class, 'login_process'])->name('login.process');
-Route::match(['get', 'post'], '/logout', [MemberController::class, 'logout'])->name('logout');
+Route::match(['get', 'post'], '/logout', [MemberController::class, 'logout'])->name('logout')->middleware('checkAccess:inspektur,user');
 
-Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('member.dashboard');
-Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.kambing');
-Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak');
-Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->name('member.upload_kontrak');
+Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('member.dashboard')->middleware('checkAccess:user');
+Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.kambing')->middleware('checkAccess:user');
+Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak')->middleware('checkAccess:user');
+Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->name('member.upload_kontrak')->middleware('checkAccess:user');
 
 // Kambing
-Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
-Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses');
-Route::get('/kambing', [KambingController::class,'kambing'])->name('all-kambing');
-Route::delete('/kambing/{id}', [KambingController::class, 'setMeninggal'])->name('set-kambing-meninggal');
+Route::get('/kambing', [KambingController::class,'kambing'])->name('all-kambing')->middleware('checkAccess:inspektur');
+Route::delete('/kambing/{id}', [KambingController::class, 'setMeninggal'])->name('set-kambing-meninggal')->middleware('checkAccess:inspektur');
+Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view')->middleware('checkAccess:inspektur');
+Route::post('/add-kambing/proses',[AddKambingController::class,'store'])->name('add-kambing-proses')->middleware('checkAccess:inspektur');
 
 // Halaman Penerimaan Member
-Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin.pendaftaran');
-Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::class,'updateStatus'])->name('admin.pendaftaran.update-status');
+Route::get('/admin/pendaftaran',[AdminPendaftaranController::class,'index'])->name('admin.pendaftaran')->middleware('checkAccess:inspektur');
+Route::post('/admin/pendaftaran/update-status',[AdminPendaftaranController::class,'updateStatus'])->name('admin.pendaftaran.update-status')->middleware('checkAccess:inspektur');
 
 // Inspeksi Kambing
 Route::get('/inspeksi-kambing',[AddKambingController::class,'inspeksiKambingView'])->name('inspeksi-kambing-view');
 Route::post('/inspeksi-kambing/proses',[AddKambingController::class,'inspeksiKambingProses'])->name('inspeksi-kambing-proses');
-Route::get('/riwayat-kambing', [RiwayatKambingController::class, 'index'])->name('riwayat-kambing');
+Route::get('/riwayat-kambing', [RiwayatKambingController::class, 'index'])->name('riwayat-kambing')->middleware('checkAccess:inspektur');
+
 
 // Add Produk
-Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view');
-Route::post('/add-produk/proses',[ProdukController::class,'addProdukProses'])->name('add-produk-proses');
-Route::get('/list-produk', [ProdukController::class, 'listProduk'])->name('list-produk');
-Route::delete('/delete-produk/{id}', [ProdukController::class, 'deleteProduk'])->name('delete-produk');
+Route::get('/add-produk',[ProdukController::class,'addProdukView'])->name('add-produk-view')->middleware('checkAccess:inspektur');
+Route::post('/add-produk/proses',[ProdukController::class,'addProdukProses'])->name('add-produk-proses')->middleware('checkAccess:inspektur');
+Route::get('/list-produk', [ProdukController::class, 'listProduk'])->name('list-produk')->middleware('checkAccess:inspektur');
+Route::delete('/delete-produk/{id}', [ProdukController::class, 'deleteProduk'])->name('delete-produk')->middleware('checkAccess:inspektur');
 
 // Assets
 Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');

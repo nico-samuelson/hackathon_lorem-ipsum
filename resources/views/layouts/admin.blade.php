@@ -13,25 +13,12 @@
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
     rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     {{-- <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <script src="https://cdn.tailwindcss.com/3.3.0"></script> --}}
-    <script>
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-        fontFamily: {
-            sans: ["Roboto", "sans-serif"],
-            body: ["Roboto", "sans-serif"],
-            mono: ["ui-monospace", "monospace"],
-        },
-        },
-        corePlugins: {
-        preflight: false,
-        },
-    };
-    </script>
 
     {{-- CDN for SweetAlert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -59,7 +46,7 @@
 <body>
 
     @include('layouts.sidebar')
-    <main class="h-full">
+    <main class="min-h-screen bg-slate-100">
         @yield('content')
     </main>
 

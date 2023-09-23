@@ -41,8 +41,8 @@
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        Pemeliharaan Kambing
+                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                        AWALL
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -56,7 +56,7 @@
                     data-te-ripple-init
                     data-te-ripple-color="light"
                     >
-                    learn more
+                    Pelajari
                     </button>
     
                     <!-- Modal -->
@@ -75,8 +75,8 @@
     
                                 <!--Modal body-->
                                 <div class="relative flex-auto p-4" data-te-modal-body-ref>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
+                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -88,8 +88,8 @@
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        Pemeliharaan Kambing
+                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                         Pemeliharaan Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -102,7 +102,7 @@
                     data-te-target="#exampleModal"
                     data-te-ripple-init
                     data-te-ripple-color="light">
-                    learn more
+                    Pelajari
                     </button>
     
                     <!-- Modal -->
@@ -120,9 +120,9 @@
                             class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
     
                                 <!--Modal body-->
-                                <div class="relative flex-auto p-4" data-te-modal-body-ref>
+                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -134,8 +134,8 @@
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        Pemeliharaan Kambing
+                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                        Pemerahan Susu Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -148,7 +148,7 @@
                     data-te-target="#exampleModal"
                     data-te-ripple-init
                     data-te-ripple-color="light">
-                    learn more
+                    Pelajari
                     </button>
     
                     <!-- Modal -->
@@ -166,9 +166,9 @@
                             class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
     
                                 <!--Modal body-->
-                                <div class="relative flex-auto p-4" data-te-modal-body-ref>
+                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -180,8 +180,8 @@
                     <div class="flex-start flex items-center pt-2 md:block md:pt-0">
                     <div
                         class="-ml-[5px] mr-3 h-[15px] w-[15px] rounded-full bg-neutral-300 dark:bg-neutral-500 md:-mt-[5px] md:ml-0 md:mr-0"></div>
-                    <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-300">
-                        Pemeliharaan Kambing
+                    <p class="mt-2 text-sm text-amber-950 dark:text-neutral-300">
+                        Pengolahan Susu Kambing
                     </p>
                     </div>
                     <div class="ml-4 mt-2 pb-5 md:ml-0">
@@ -194,7 +194,7 @@
                     data-te-target="#exampleModal"
                     data-te-ripple-init
                     data-te-ripple-color="light">
-                    learn more
+                    Pelajari
                     </button>
     
                     <!-- Modal -->
@@ -212,9 +212,9 @@
                             class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
     
                                 <!--Modal body-->
-                                <div class="relative flex-auto p-4" data-te-modal-body-ref>
+                                <!-- <div class="relative flex-auto p-4" data-te-modal-body-ref>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2S4cYpgI40dThltS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -234,10 +234,10 @@
     </section>
 
     {{-- Carousel --}}
-    <div class="relative gradient-bg py-10">
+    <div class="relative gradient-bg py-10 mb-10">
         <section class="products pb-10">
-            <p class="mb-5 ml-5 text-xl md:text-2xl font-bold text-left text-neutral-700 dark:text-neutral-300 md:text-center">
-                PENGOLAHAN SUSU ETAWA
+            <p class="mb-5 ml-5 text-xl md:text-3xl font-bold text-left text-yellow-950 dark:text-neutral-300 md:text-center>
+                HASIL PENGOLAHAN SUSU ETAWA
             </p>
             <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
                 <!--Carousel indicators-->
@@ -275,17 +275,25 @@
                     data-te-carousel-active
                     data-te-carousel-item
                     style="backface-visibility: hidden">
-                    <img
-                        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-                        class="block w-full"
-                        alt="..." />
-                    <div
-                        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                        <h5 class="text-xl">First slide label</h5>
-                        <p>
-                        Some representative placeholder content for the first slide.
-                        </p>
+                    <div class="flex">
+                        <div class="w-1/2">
+                            <img
+                                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
+                                class="block w-full"
+                                alt="..." />
+                        </div>
+                        
+                        <div
+                            class="w-1/2 py-5 text-bold text-left text-white ml-4">
+                            <p class="text-3xl font-semibold text-yellow-950 mb-2">Es Krim</p>
+                            <div class="inline-block justify-center rounded-lg px-5 pb-0.5 pt-0.5 text-xs font-light leading-normal text-white bg-amber-950">Original</div>
+                            <div class="inline-block justify-center rounded-lg px-5 pb-0.5 pt-0.5 text-xs font-light leading-normal text-white bg-amber-950">Gula Aren</div>
+                            <p class="text-xl text-left font-normal pt-2 overflow-y-auto overflow-x-hidden">Keterangan produk ajkjdkfajskdjfam nxdcfvgbyhnujmkdjfudufjhaijeijfhajesdifjaijfi</p>
+                            <p class="text-3xl absolute font-medium bottom-5 right-4 text-yellow-950">Rp. xx</p>
+                        </div>
+
                     </div>
+                    
                     </div>
     
                     <!--Second item-->
@@ -294,7 +302,7 @@
                     data-te-carousel-item
                     style="backface-visibility: hidden">
                     <img
-                        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
+                        src="iews/img/susu_botol.jpg"
                         class="block w-full"
                         alt="..." />
                     <div
@@ -379,26 +387,19 @@
         </section>
     
         <section class="offers px-5 md:px-24">
-            <p class="mb-5 text-lg text-left text-neutral-700 dark:text-neutral-300 md:text-center">
-                Tertarik mendapat keuntungan 
-                hasil produksi susu kambing ?
-            </p>
+            <div class="flex mb-10">
+                <div class="flex justify-center items-center my-10">
+                    <div class="my-5 mx-5 align-middle">
+                        <p class="text-3xl font-bold inline-block align-middle mb-5">Gabung Sekarang dan Nantikan Keuntungannya</p>
+                        <div class="bottom-5">
+                            <button class="inline-block justify-center rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
+                                Gabung Sekarang
+                            </button>
+                        </div>
 
-            <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-            class="block w-full pb-5"
-            alt="..." />
-
-            <p class="text-lg font-bold ">Keuntungan</p>
-            <ul class="pb-5">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-
-            <div class="flex justify-center">
-                <button class="inline-block justify-center rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#f39a25] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.3),0_4px_18px_0_rgba(243,154,37,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(243,154,37,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(243,154,37,0.2),0_4px_18px_0_rgba(243,154,37,0.1)]" style="background-color: #f39a25">
-                    Gabung Sekarang
-                </button>
+                    </div>
+                    
+                </div>          
             </div>
         </section>
     </div>
