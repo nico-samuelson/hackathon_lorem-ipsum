@@ -39,6 +39,7 @@ export default function MainLayout({ children }) {
 
             `}
                 </style>
+                <link rel="icon" type="image/x-icon" href="/logo.png"></link>
             </Head>
 
             {/* <MobileContextProvider> */}
@@ -56,7 +57,7 @@ export default function MainLayout({ children }) {
                         >
                             <img
                                 className="mr-2"
-                                src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
+                                src="/logo.png"
                                 style={{ height: '20px' }}
                                 alt="TE Logo"
                                 loading="lazy"

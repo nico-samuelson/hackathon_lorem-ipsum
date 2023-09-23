@@ -127,6 +127,7 @@ export default function Pesan({ produk }) {
                         }
                     `}
                 </style>
+                <title>Pesan Produk | Etawa</title>
             </Head>
 
             

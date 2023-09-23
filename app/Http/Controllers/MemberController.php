@@ -42,16 +42,7 @@ class MemberController extends BaseController
         $admin = $inspekturController->getAll(['username' => $request->username]);
         $user = $this->getAll(['username' => $request->username]);
 
-        if (count($user) > 0) {
-            if (password_verify($request->password, $user[0]->password) && $user[0]->status == 1) {
-                session(['id_user' => $user[0]->id]);
-                session(['email' => $user[0]->email]);
-                session(['nama' => $user[0]->nama]);
-                session(['isInspektur' => false]);
-                return redirect()->route('home');
-            } 
-        } 
-        else if (count($admin) > 0) {
+        if (count($admin) > 0) {
             if (password_verify($request->password, $admin[0]->password) && $admin[0]->status == 0) {
                 session(['id_user' => $admin[0]->id]);
                 session(['email' => $admin[0]->email]);
@@ -60,6 +51,15 @@ class MemberController extends BaseController
                 return redirect()->route('dashboard');
             } 
         }
+        else if (count($user) > 0) {
+            if (password_verify($request->password, $user[0]->password) && $user[0]->status == 1) {
+                session(['id_user' => $user[0]->id]);
+                session(['email' => $user[0]->email]);
+                session(['nama' => $user[0]->nama]);
+                session(['isInspektur' => false]);
+                return redirect()->route('member.dashboard');
+            } 
+        } 
 
         return redirect()->back()->with('error', 'Username atau Password invalid!');
     }

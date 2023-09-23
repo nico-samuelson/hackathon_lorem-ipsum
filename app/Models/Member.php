@@ -27,6 +27,7 @@ class Member extends Model
         'username',
         'password',
         'foto_ktp',
+        'status',
     ]; 
 
     /**
