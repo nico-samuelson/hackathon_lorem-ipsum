@@ -13,20 +13,26 @@ class checkAccess
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, String $str): Response
+    public function handle(Request $request, Closure $next, String ...$str): Response
     {
-        $roles = explode($str,",");
+        // $roles = substr($str,0,12)->explode(',:', $str);
+        $roles = $str;
         $my_role = "";
-        if(!session('id_user')){
+        if(session('id_user')){
             if(!session('isInspektur')){
-                $my_role = "inspektur";
-                if(!in_array($my_role,$roles)){
-                    return redirect()->route('member.dashboard');
-                }
-            }else{
                 $my_role = "user";
+                if(!in_array($my_role,$roles)){
+                    return redirect()->route('home');
+                }
             }
-        }else{
+            else{
+                $my_role = "inspektur";
+                if (!in_array($my_role, $roles)) {
+                    return redirect()->route('home');
+                }
+            }
+        }
+        else{
             $my_role = "guest";
             if(!in_array($my_role,$roles)){
                 return redirect()->route('home');
