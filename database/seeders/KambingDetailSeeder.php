@@ -22,7 +22,7 @@ class KambingDetailSeeder extends Seeder
             KambingDetail::create([
                 'kambing_id' => $kambings[$i]->id,
                 'member_id' => $members[array_rand($members->toArray())],
-                'file_kontrak' => '/kontrak',
+                'file_kontrak' => '/kontrak' . fake()->randomNumber(),
                 'file_kontrak_signed' => array_rand(['/kontrak-signed' => 0, null => 1]),
                 'status' => array_rand([0, 1]),
             ]);

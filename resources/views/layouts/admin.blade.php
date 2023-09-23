@@ -46,7 +46,7 @@
 <body>
 
     @include('layouts.sidebar')
-    <main class="min-h-screen bg-slate-100">
+    <main class="min-h-screen" style="background-color: #fffbf5">
         @yield('content')
     </main>
 

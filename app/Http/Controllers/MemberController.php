@@ -8,10 +8,13 @@ use App\Models\Inspektur;
 use Illuminate\Http\Request;
 use App\Models\KambingDetail;
 use App\Models\CheckingHistory;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\KambingController;
 use App\Http\Controllers\InspekturController;
 use App\Http\Controllers\KambingDetailController;
+use Exception;
+use Illuminate\Support\Facades\Storage;
 
 class MemberController extends BaseController
 {
@@ -38,8 +41,6 @@ class MemberController extends BaseController
 
         $admin = $inspekturController->getAll(['username' => $request->username]);
         $user = $this->getAll(['username' => $request->username]);
-
-        // dd($user);
 
         if (count($user) > 0) {
             if (password_verify($request->password, $user[0]->password) && $user[0]->status == 1) {
@@ -94,38 +95,47 @@ class MemberController extends BaseController
 
     public function kontrak() {
         $kambingDetail = new KambingDetail();
-        // dd($kambingDetail->getAll(['member_id' => session('id_user')]));
+        $kontrak = $kambingDetail->select('file_kontrak', 'file_kontrak_signed')->distinct()->where('member_id', session('id_user'))->orderBy('file_kontrak_signed', 'asc')->get();
+
+
         return view('member.kontrak', [
             'title' => 'Detail Kontrak',
-            'kambing' => $kambingDetail->where('member_id', session('id_user'))->orderBy('file_kontrak_signed', 'asc')->get(),
+            'kontrak' => $kontrak,
         ]);
     }
 
     public function upload_kontrak(Request $request) {
         $request->validate([
-            'id' => 'required',
+            'file_kontrak' => 'required',
             'file_kontrak_signed' => 'required|file|mimes:pdf'
         ]);
 
-        // file upload foto kambing
         $file = $request->file('file_kontrak_signed');
-        
         $hash = md5($file->getClientOriginalName().time());
         $fileName = "SIGNED_KONTRAK_".$request['nama']."_".$hash.".".$file->getClientOriginalExtension();
-        $fileName = $file->storePubliclyAs('kontrak_signed/',$fileName,'public');
-        if (!$fileName) {
-            return back()->with('error', 'Kesalahan dalam mengupload kontrak!');
-        }
-        // dd($fileName);
-        $validated['file_kontrak_signed'] = $fileName;
-        // dd($validated);
 
-        // dd($request['file_kontrak_signed']);
+        DB::beginTransaction();
+        
+        try {
+            $fileName = $file->storePubliclyAs('kontrak_signed/',$fileName,'public');
+            if (!$fileName) {
+                return back()->with('error', 'Kesalahan dalam mengupload kontrak!');
+            }
+            $validated['file_kontrak_signed'] = $fileName;
+            $kdModel = new KambingDetail();
+            $k = $kdModel->where('file_kontrak', $request->file_kontrak)->get();
 
-        if ($this->kambingDetail->updatePartial($validated, $request['id'])) {
+            foreach($k as $kam) {
+                $kdModel->where('id', $kam->id)->update(['file_kontrak_signed' => $fileName]);
+            }
+
+            DB::commit();
+
             return redirect()->route('member.kontrak')->with('success', 'Kontrak berhasil diunggah!');
         }
-        else {
+        catch (Exception $e) {
+            DB::rollback();
+            Storage::delete($fileName);
             return back()->with('error', 'Kesalahan dalam mengupload kontrak!');
         }
     }
