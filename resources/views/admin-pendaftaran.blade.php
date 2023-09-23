@@ -255,7 +255,7 @@
             var id = $(this).data('id');
             var status = $(this).val();
             $.post("{{route('admin.pendaftaran.update-status')}}", {
-                
+                _token: "{{ csrf_token() }}",
                 id: id,
                 status: status
             }).then((res) => {
