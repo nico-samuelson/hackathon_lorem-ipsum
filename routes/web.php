@@ -71,6 +71,5 @@ Route::delete('/delete-produk/{id}', [ProdukController::class, 'deleteProduk'])-
 Route::get('/assets/ktp/{path}',[AssetController::class,'ktp'])->name('assets.ktp');
 Route::get('/assets/foto_kambing/{path}',[AssetController::class,'foto_kambing'])->name('assets.foto_kambing');
 Route::get('/assets/foto_produk/{path}',[AssetController::class,'foto_produk'])->name('assets.foto_produk');
-
-// PDF
-Route::get('/pdf',[PDFController::class,'generateKontrak']);
+Route::get('/assets/kontrak/{path}',[AssetController::class,'kontrak'])->name('assets.kontrak');
+Route::get('/assets/kontrak_signed/{path}',[AssetController::class,'kontrak_signed'])->name('assets.kontrak_signed');
