@@ -14,6 +14,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\KambingController;
 use App\Http\Controllers\RiwayatKambingController;
+use App\Models\Produk;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,11 @@ use App\Http\Controllers\RiwayatKambingController;
 */
 
 Route::get('/', function() {
-    return view('welcome', ['title' => 'Etawa']);
+    // dd(Produk::all());
+    return view('welcome', [
+        'title' => 'Etawa',
+        'products' => Produk::all()->toArray(),
+    ]);
 })->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('checkAccess:inspektur'); 

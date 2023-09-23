@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
     <script>
         tailwind.config = {
@@ -63,13 +64,33 @@
             height: 100%;
         }
     </style>
+ 
+    <meta name="description" content="Densu: Susu Kambing Etawa Berkualitas Terbaik. Nikmati kelembutan dan kebaikan susu kambing Etawa terbaik dalam setiap sajian. Produk alami untuk hidup sehat."> 
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Densu | Susu Kambing Etawa Berkualitas">
+    <meta itemprop="description" content="Densu: Susu Kambing Etawa Berkualitas Terbaik. Nikmati kelembutan dan kebaikan susu kambing Etawa terbaik dalam setiap sajian. Produk alami untuk hidup sehat.">
+    <meta itemprop="image" content="/storage/logo.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://etawa.online">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Densu | Susu Kambing Etawa Berkualitas">
+    <meta property="og:description" content="Densu: Susu Kambing Etawa Berkualitas Terbaik. Nikmati kelembutan dan kebaikan susu kambing Etawa terbaik dalam setiap sajian. Produk alami untuk hidup sehat.">
+    <meta property="og:image" content="/storage/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Densu | Susu Kambing Etawa Berkualitas">
+    <meta name="twitter:description" content="Densu: Susu Kambing Etawa Berkualitas Terbaik. Nikmati kelembutan dan kebaikan susu kambing Etawa terbaik dalam setiap sajian. Produk alami untuk hidup sehat.">
+    <meta name="twitter:image" content="/storage/logo.png">
 </head>
 
 <body>
 
     <!-- Main navigation container -->
     <nav class="relative flex w-full flex-wrap items-center justify-between py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:py-5 sticky top-0 z-50"
-        data-te-navbar-ref style="background: linear-gradient(to top, rgb(255, 252, 252) 0%, rgba(244,194,30,1) 120%)">
+        data-te-navbar-ref style="background: transparent">
         <div class="flex w-full flex-wrap items-center justify-between px-3">
             <div>
                 <a class="mx-2 my-1 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
@@ -128,8 +149,13 @@
         @yield('content')
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script> --}}
 </body>
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 @yield("script")
 
 </html>

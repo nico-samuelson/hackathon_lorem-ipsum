@@ -8,8 +8,8 @@
 
     <section class="statistics pb-5">
         <div class="rounded-lg bg-white mx-8 md:ml-28 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 flex items-center mb-6">
-            <h1 class="w-screen font-bold text-center text-xl py-6">
-                Jumlah Kambing: {{ $kambingByJenisKelamin[0]->count + $kambingByJenisKelamin[1]->count }} ekor
+            <h1 class="w-screen font-bold text-center text-lg py-6 uppercase">
+                Jumlah Kambing: <span class="text-2xl font-weight-bolder">{{ $kambingByJenisKelamin[0]->count + $kambingByJenisKelamin[1]->count }}</span> ekor
             </h1>
         </div>
 
