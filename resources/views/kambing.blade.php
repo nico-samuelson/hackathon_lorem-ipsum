@@ -25,7 +25,7 @@
     <div
         class="block w-full min-h-[10rem] rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 mt-8">
         <div class="overflow-x-auto p-6">
-            <p class="font-bold pb-5 text-xl">Detail Kepemilikian Kambing</p>
+            <p class="font-bold pb-5 text-xl">Tabel Kambing</p>
             <table id="tabel-kambing" class="table-auto overflow-scroll w-full">
                 <thead class="border-b font-medium dark:border-neutral-500">
                     <tr>
