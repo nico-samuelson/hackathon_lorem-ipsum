@@ -8,16 +8,19 @@ use App\Models\Member;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Controllers\PDFController;
 
 class AdminPendaftaranController extends Controller
 {
     protected $kambingDetail;
     protected $kambing;
+    protected $pdf;
 
     public function __construct()
     {
         $this->kambingDetail = new KambingDetailController(new KambingDetail());
         $this->kambing = new KambingController(new Kambing());
+        $this->pdf = new PDFController();
     }
 
     public function index() {
@@ -59,12 +62,14 @@ class AdminPendaftaranController extends Controller
                         $kambingDipilih[] = $betina[$betinaDipilih[1]];
                     }
                 }
+                // generate kontrak
+                $kontrak = $this->pdf->generateKontrak($request->id);
                 foreach($kambingDipilih as $k) {
                     $this->kambingDetail->store($req->merge([
                         'kambing_id' => $k['id'],
                         'member_id' => $request->id,
                         'status' => 0,
-                        'file_kontrak' => '/kontrak', // iki gantien atek file mu ngkok je
+                        'file_kontrak' => $kontrak,
                     ]));
                 }
             }

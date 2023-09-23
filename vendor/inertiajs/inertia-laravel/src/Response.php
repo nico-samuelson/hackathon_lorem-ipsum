@@ -38,7 +38,7 @@ class Response implements Responsable
 
     /**
      * @param string|array $key
-     * @param mixed|null   $value
+     * @param mixed        $value
      *
      * @return $this
      */
@@ -55,7 +55,7 @@ class Response implements Responsable
 
     /**
      * @param string|array $key
-     * @param mixed|null   $value
+     * @param mixed        $value
      *
      * @return $this
      */
@@ -99,8 +99,7 @@ class Response implements Responsable
         $page = [
             'component' => $this->component,
             'props' => $props,
-            // 'url' => $request->getBaseUrl().$request->getRequestUri(),
-            'url' => $request->getRequestUri(),
+            'url' => $request->getBaseUrl().$request->getRequestUri(),
             'version' => $this->version,
         ];
 
