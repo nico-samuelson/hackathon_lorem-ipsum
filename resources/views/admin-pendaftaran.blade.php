@@ -259,7 +259,12 @@
                 id: id,
                 status: status
             }).then((res) => {
-                showSuccessToast(res.message);
+                if (res.message != undefined) {
+                    showSuccessToast(res.message);
+                }
+                else {
+                    showFailedToast(res.error);
+                }
             }).catch((err) => {
                 showFailedToast(err.message);
                 this.checked = !this.checked;

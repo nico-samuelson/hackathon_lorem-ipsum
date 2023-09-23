@@ -28,11 +28,19 @@ class AdminPendaftaranController extends Controller
     }
 
     public function updateStatus(Request $request) {
+        // dd($request);
         DB::beginTransaction();
         
         try {
             $memberController = new MemberController(new Member());
-            $memberController->updatePartial(['status' => $request->status], $request->id);
+            // dd($request->status);
+            if ($memberController->getById($request->id)->status == 1 && $request->status == 2) {
+                // dd('tes');
+                return response()->json(['error' => 'Member tidak bisa dibatalkan!']);
+            }
+
+            $validated['status'] = $request->status;
+            $memberController->updatePartial($validated, $request->id);
     
             if ($request->status == 1) {
                 $jantan = $this->kambing->getAll(['gender' => 'Jantan']);
