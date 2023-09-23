@@ -74,10 +74,10 @@ class AddKambingController extends Controller
                 return ['error' => 'Gagal menyimpan foto Kambing!'];
             }
             $request['foto'] = $fileName;
-
             // dd($request);
             $store = $this->checkingHistoryController->store($request);
             if(isset($store['error'])) {
+                $this->kambingController->updatePartial(['hamil' => $request['hamil']], $request['kambing_id']);
                 return $store;
             }else{
                 return ['status' => 'success', 'message' => 'Kambing berhasil diinspeksi!'];
