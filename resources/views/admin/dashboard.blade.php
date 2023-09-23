@@ -25,7 +25,7 @@
                 </canvas>
                 <p class=" mt-3 w-full text-center">
                     <a
-                    href="{{ route('inspeksi-kambing-view') }}"
+                    href="{{ route('riwayat-kambing') }}"
                     class="text-primary text-center w-screen transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
                     >
                     Lihat Detail
@@ -37,15 +37,16 @@
                 <p class="font-bold text-center">Berdasarkan Umur</p>
                 
                 <canvas
+                class=""
                 data-te-chart="bar"
-                data-te-dataset-label="['0 - 3', '3 - 6', '6 - 9', '9 - 12', '>12']"
+                data-te-dataset-label="Kambing"
                 data-te-labels="['0 - 3', '3 - 6', '6 - 9', '9 - 12', '>12']"
                 data-te-dataset-data="{{ '[' . $kambingUrip[0]->count . ", " . $kambingUrip[1]->count .", " . $kambingUrip[2]->count .", " . $kambingUrip[3]->count .", " . $kambingUrip[4]->count . ']'}}"
                 data-te-dataset-background-color="['rgba(63, 81, 181, 0.5)', 'rgba(77, 182, 172, 0.5)', 'rgba(66, 133, 244, 0.5)', 'rgba(156, 39, 176, 0.5)', 'rgba(233, 30, 99, 0.5)', 'rgba(66, 73, 244, 0.4)', 'rgba(66, 133, 244, 0.2)']">
                 </canvas>
                 <p class=" mt-3 w-full text-center">
                     <a
-                    href="{{ route('inspeksi-kambing-view') }}"
+                    href="{{ route('riwayat-kambing') }}"
                     class="text-primary text-center w-screen transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
                     >
                     Lihat Detail
@@ -65,7 +66,7 @@
                 </canvas>
                 <p class=" mt-3 w-full text-center">
                     <a
-                    href="{{ route('inspeksi-kambing-view') }}"
+                    href="{{ route('riwayat-kambing') }}"
                     class="text-primary text-center w-screen transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
                     >
                     Lihat Detail
