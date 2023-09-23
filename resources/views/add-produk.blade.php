@@ -1,13 +1,14 @@
 @extends("layouts.admin")
 @section("content")
-<div class="sm:my-10 my-5">
-    <h1 class="sm:pl-32 pl-16 sm:text-5xl text-xl font-bold sm:mb-2 text-form">PENAMBAHAN PRODUK</h1>
-    <h2 class="sm:pl-32 pl-16 text-md text-form">Isilah dengan informasi yang benar !</h2>
+<div class="sm:py-10 py-5">
+    <h1 class="sm:pl-32 pl-8 sm:text-5xl text-xl font-bold sm:mb-2 text-form">PENAMBAHAN PRODUK</h1>
+    <h2 class="sm:pl-32 pl-8 text-md text-form">Isilah dengan informasi yang benar !</h2>
 </div>
-<div class="">
+<div
+    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:ml-32 mx-8 p-8 overflow-x-auto">
     <form action="" id="form">
         <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-5 mb-5">
-            <div class="sm:pl-32 pl-16 sm:pr-5 pr-16">
+            <div class="sm:pr-5">
                 <div class="grid grid-cols-1">
                     <div class="mb-5">
                         <label class="font-serif ml-2 text-form" for="nama">Nama Produk</label>
@@ -23,7 +24,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
+            <div class="sm:pl-5">
                 <label class="font-serif ml-2 text-form" for="foto_produk">Foto Produk</label>
                 <input id="foto_produk" name="foto_produk" class="border-2 border-gray-300 rounded-md w-full form-input-border file:mr-4 sm:file:my-24 file:my-8 sm:file:mx-24 file:mx-2 
                 file:rounded-full file:border-0

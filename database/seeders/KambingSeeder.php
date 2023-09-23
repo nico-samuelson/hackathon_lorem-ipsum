@@ -16,7 +16,7 @@ class KambingSeeder extends Seeder
         for($i = 0; $i < 100; $i++) {
             Kambing::create([
                 'gender' => array_rand([0, 1]),
-                'tanggal_lahir' => fake()->date(),
+                'tanggal_lahir' => fake()->dateTimeBetween('-15 years', '-1 week'),
                 'no_kambing' => $i + 1,
                 'hamil' => array_rand([0, 1]),
             ]);

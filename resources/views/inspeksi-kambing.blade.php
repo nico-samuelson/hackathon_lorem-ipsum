@@ -1,13 +1,14 @@
 @extends("layouts.admin")
 @section("content")
-<div class="sm:my-10 my-5">
-    <h1 class="sm:pl-32 pl-16 sm:text-5xl text-xl font-bold sm:mb-2 text-form">INSPEKSI KAMBING</h1>
-    <h2 class="sm:pl-32 pl-16 text-md text-form">Isilah dengan informasi yang benar !</h2>
+<div class="sm:py-10 py-5">
+    <h1 class="sm:pl-32 pl-8 sm:text-5xl text-xl font-bold sm:mb-2 text-form">INSPEKSI KAMBING</h1>
+    <h2 class="sm:pl-32 pl-8 text-md text-form">Isilah dengan informasi yang benar !</h2>
 </div>
-<div class="">
+<div
+  class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 p-8 md:ml-32 mx-8">
     <form action="" id="form">
         <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-5 mb-5">
-            <div class="sm:pl-32 pl-16 sm:pr-5 pr-16">
+            <div class="sm:pr-5">
                 <div class="grid grid-cols-1">
                     <div class="mb-5">
                         <label class="font-serif ml-2 text-form" for="id_kambing">
@@ -38,7 +39,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="sm:pr-32 pr-16 sm:pl-5 pl-16">
+            <div class="sm:pl-5">
                 <label class="font-serif ml-2 text-form" for="foto_kambing">Foto Kambing</label>
                 <input id="foto_kambing" name="foto_kambing" class="border-2 border-gray-300 rounded-md w-full form-input-border file:mr-4 file:my-24 sm:file:mx-24 file:mx-8
                 file:rounded-full file:border-0
