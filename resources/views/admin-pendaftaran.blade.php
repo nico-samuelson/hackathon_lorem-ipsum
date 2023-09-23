@@ -255,11 +255,16 @@
             var id = $(this).data('id');
             var status = $(this).val();
             $.post("{{route('admin.pendaftaran.update-status')}}", {
-                
+                _token: "{{ csrf_token() }}",
                 id: id,
                 status: status
             }).then((res) => {
-                showSuccessToast(res.message);
+                if (res.message != undefined) {
+                    showSuccessToast(res.message);
+                }
+                else {
+                    showFailedToast(res.error);
+                }
             }).catch((err) => {
                 showFailedToast(err.message);
                 this.checked = !this.checked;
