@@ -64,8 +64,8 @@ class MemberController extends BaseController
         return redirect()->back()->with('error', 'Username atau Password invalid!');
     }
 
-    public function logout() {
-        session()->flush();
+    public function logout(Request $request) {
+        $request->session()->flush();
         return redirect()->route('home');
     }
 
