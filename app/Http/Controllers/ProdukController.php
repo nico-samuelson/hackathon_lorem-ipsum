@@ -63,4 +63,21 @@ class ProdukController extends BaseController
             return ['error' => ['Anda tidak memiliki akses untuk mengakses halaman ini!']];
         }
     }
+
+    public function listProduk()
+    {
+        $data = ['title' => 'List Produk'];
+        $data['products'] = $this->getAll()->toArray();
+
+        return view('list-produk', $data);
+    }
+
+    public function deleteProduk(Request $request, $id)
+    {
+        if (!session('isInspektur')) {
+            return abort(403);
+        }
+        $this->delete($id);
+        return redirect()->route('list-produk');
+    }
 }

@@ -99,7 +99,7 @@ class CheckingHistory extends Model
     */
     public function relations()
     {
-        return ['kambings', 'inspektur'];
+        return ['kambing', 'inspektur'];
     }
 
     /**

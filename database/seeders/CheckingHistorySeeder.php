@@ -18,7 +18,7 @@ class CheckingHistorySeeder extends Seeder
         $kambing = Kambing::all()->pluck('id');
         $inspektur = Inspektur::all()->pluck('id');
 
-        for($i = 0; $i < 200; $i++) {
+        for($i = 0; $i < 500; $i++) {
             CheckingHistory::create([
                 'kambing_id' => $kambing[array_rand($kambing->toArray())],
                 'inspektur_id' => $inspektur[array_rand($inspektur->toArray())],

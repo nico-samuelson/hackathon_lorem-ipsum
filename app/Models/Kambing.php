@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use App\Models\ModelUtils;
+use App\Models\KambingDetail;
+use App\Models\CheckingHistory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 
 class Kambing extends Model
@@ -106,11 +108,11 @@ class Kambing extends Model
     */
     public function kambing_details()
     {
-        return $this->hasMany('App\Models\KambingDetail');
+        return $this->hasMany(KambingDetail::class);
     }
     public function checking_histories()
     {
-        return $this->hasMany('App\Models\CheckingHistory');
+        return $this->hasMany(CheckingHistory::class);
     }
 
 }
