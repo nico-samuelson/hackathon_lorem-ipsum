@@ -42,6 +42,7 @@ Route::match(['get', 'post'], '/logout', [MemberController::class, 'logout'])->n
 Route::get('/member/dashboard',[MemberController::class,'dashboard'])->name('member.dashboard');
 Route::get('/member/kambing',[MemberController::class,'kambing'])->name('member.kambing');
 Route::get('/member/kontrak',[MemberController::class,'kontrak'])->name('member.kontrak');
+Route::post('/member/kontrak', [MemberController::class, 'upload_kontrak'])->name('member.upload_kontrak');
 
 // Add Kambing
 Route::get('/add-kambing',[AddKambingController::class,'addKambingView'])->name('add-kambing-view');
