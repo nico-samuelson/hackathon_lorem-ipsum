@@ -157,7 +157,7 @@ export default function Pesan({ produk }) {
                                             <div id="image-container">
                                                 <Image
                                                     className="image-produk"
-                                                    src={encodeURI(item.foto)}
+                                                    src={route('assets.foto_produk', {'path': item.foto})}
                                                     preview={{
                                                         toolbarRender: (
                                                             _,
