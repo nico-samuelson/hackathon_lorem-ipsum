@@ -128,8 +128,7 @@
             $('.modal-body').append(`<div><span class="font-semibold">Sakit</span>: ${sakit ? 'Ya' : 'Tidak'}</div>`);
             $('.modal-body').append(`<div><span class="font-semibold">Keterangan</span>:</div>`);
             $('.modal-body').append(`<div>${keterangan}</div>`);
-            $('.modal-body').append('<img src="'+foto+'" class="w-full mb-4">');
-
+            $('.modal-body').append('<img src="'+ `${window.location.origin}/assets/foto_kambing/${foto}` + '" class="w-full mb-4">');
 
 
             $('#exampleModalCenter').modal('show');
