@@ -13,7 +13,7 @@ class PDFController extends Controller
     public function __construct(){
         $this->memberController = new MemberController(new Member());
     }
-    public function generateKontrak($member_id='9a324ccf-53fc-4cbc-a9f6-42fa8cbf2d4c')
+    public function generateKontrak($member_id)
     {
         $member = $this->memberController->getById($member_id);
         $data = $member->toArray();
