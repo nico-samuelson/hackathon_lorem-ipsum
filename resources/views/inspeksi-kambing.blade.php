@@ -33,6 +33,13 @@
                             <option value="1" class="font-serif">Sakit</option>
                         </select>
                     </div>
+                    <div class="mb-5">
+                        <label class="font-serif ml-2 text-form" for="hamil">Status Kehamilan Kambing</label>
+                        <select id="hamil"  class="bg-white border-2 border-gray-300 font-serif rounded-lg block w-full py-2 pl-3 form-input-border">
+                            <option>-- Pilih Status Kehamilan Kambing --</option>
+                            <option value="0" class="font-serif">Tidak Hamil</option>
+                            <option value="1" class="font-serif">Hamil</option>
+                    </div>
                     <div class="">
                         <label class="font-serif ml-2 text-form" for="keterangan">Keterangan</label>
                         <textarea id="keterangan" class="border-2 border-gray-300 rounded-md w-full form-input-border"></textarea>
@@ -61,6 +68,7 @@
             data.append("kambing_id", $("#kambing_id").val());
             data.append("status", $("#status").val());
             data.append("keterangan", $("#keterangan").val());
+            data.append("hamil", $("#hamil").val());
             data.append("_token", "{{ csrf_token() }}");
             Swal.fire({
                 title: 'Apakah anda yakin?',
