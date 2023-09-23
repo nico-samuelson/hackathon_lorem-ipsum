@@ -21,6 +21,7 @@ class PesanController extends Controller
             'title' => 'Pesan Kuy!!'
         ];
         $data = array_merge($data,['produk' => $produk]);
+        $data['isLoggedIn'] = !!session('id_user');
         return Inertia::render('Pesan',$data);
     }
 }
