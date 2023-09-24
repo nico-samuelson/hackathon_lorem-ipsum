@@ -35,6 +35,7 @@ export default function Pesan({ produk, isLoggedIn }) {
     const removeItem = (idx) => {
         setProductsCount((prev) => {
             let newProductsCount = [...prev];
+            if (newProductsCount[idx] == 0) return newProductsCount;
             newProductsCount[idx]--;
             return newProductsCount;
         });
