@@ -31,7 +31,7 @@
                     Jumlah Kambing Anda
                     </h5>
                     <h6 class="mb-5 text-base font-medium leading-tight text-neutral-500 dark:text-neutral-50">
-                        {{ $kambing->count() . ' ekor' }}
+                        {{ count($kambing) . ' ekor' }}
                     </h6>
                     <a
                     type="button"
@@ -85,7 +85,7 @@
                                 <td>{{ $history->keterangan }}</td>
                                 <td>{{ $history->inspektur->nama }}</td>
                                 <td>
-                                    <a href={{ $history->foto }}>
+                                    <a href={{ route('assets.foto_kambing', $history->foto) }}>
                                         <button
                                         type="button"
                                         class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#EB8600] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.3),0_4px_18px_0_rgba(235,134,0,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(235,134,0,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(235,134,0,0.2),0_4px_18px_0_rgba(235,134,0,0.1)]"

@@ -28,10 +28,9 @@ use App\Models\Produk;
 */
 
 Route::get('/', function() {
-    // dd(Produk::all());
     return view('welcome', [
         'title' => 'Etawa',
-        'products' => Produk::all()->toArray(),
+        'products' => Produk::orderBy('created_at', 'desc')->limit(3)->get(),
     ]);
 })->name('home');
 

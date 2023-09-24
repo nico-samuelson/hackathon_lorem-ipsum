@@ -17,14 +17,15 @@ class KambingDetailSeeder extends Seeder
     {
         $kambings = Kambing::all();
         $members = Member::all()->pluck('id');
+        $unsigned = ['KONTRAK_Christopher Julius Limantoro_d2de52f0f8c00355acf0496f1bbd7b8e..pdf', 'KONTRAK_dcr_d2de52f0f8c00355acf0496f1bbd7b8e.pdf'];
         // dd($members);
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 20; $i++) {
             KambingDetail::create([
                 'kambing_id' => $kambings[$i]->id,
                 'member_id' => $members[array_rand($members->toArray())],
-                'file_kontrak' => '/kontrak' . fake()->randomNumber(),
-                'file_kontrak_signed' => array_rand(['/kontrak-signed' => 0, null => 1]),
-                'status' => array_rand([0, 1]),
+                'file_kontrak' => $unsigned[array_rand($unsigned)],
+                'file_kontrak_signed' => 'SIGNED_KONTRAK__d5a593388d284831e2eda50261a43f9e.pdf',
+                'status' => 1,
             ]);
         };
     }
