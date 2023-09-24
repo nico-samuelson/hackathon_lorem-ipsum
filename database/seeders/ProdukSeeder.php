@@ -14,16 +14,22 @@ class ProdukSeeder extends Seeder
     {
         $produk = [
             [
-                'nama' => 'Susu Kambing Etawa',
-                'harga' => 'Rp. 20.000',
-                'deskripsi' => 'Susu kambing etawa adalah susu yang dihasilkan oleh kambing etawa. Susu kambing etawa memiliki kandungan gizi yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa memiliki kandungan kalsium, protein, dan vitamin yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan lemak yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan kolesterol yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan laktosa yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan asam lemak yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan mineral yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan vitamin yang lebih tinggi dibandingkan dengan susu sapi.',
-                'foto' => 'https://www.ayobandung.com/images-bandung/post/articles/2020/04/29/104795/susu-kambing-etawa.jpg',
+                'nama' => 'Susu Kambing',
+                'harga' => 'Rp. 15.000',
+                'deskripsi' => 'Susu asli hasil perah kambing. Enak sehat dan lebih sehat daripada Susu Sapi.',
+                'foto' => 'FOTO_PRODUK_Susu Kambing_2c6488f4b81f344f8474f9a7a6bf4bcf.jpg',
             ],
             [
-                'nama' => 'Susu Bubuk Kambing Etawa',
-                'harga' => 'Rp. 25.000',
-                'deskripsi' => 'Susu kambing etawa adalah susu yang dihasilkan oleh kambing etawa. Susu kambing etawa memiliki kandungan gizi yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa memiliki kandungan kalsium, protein, dan vitamin yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan lemak yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan kolesterol yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan laktosa yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan asam lemak yang lebih rendah dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan mineral yang lebih tinggi dibandingkan dengan susu sapi. Susu kambing etawa juga memiliki kandungan vitamin yang lebih tinggi dibandingkan dengan susu sapi.',
-                'foto' => 'https://www.ayobandung.com/images-bandung/post/articles/2020/04/29/104795/susu-kambing-etawa.jpg',
+                'nama' => 'Susu Bubuk',
+                'harga' => 'Rp. 20.000',
+                'deskripsi' => 'Susu bubuk cap Kambing. Enak sehat dan bergizi!',
+                'foto' => 'FOTO_PRODUK_Susu Bubuk_1aa78db3abd99b6198c440189d4d3c82.jpg',
+            ],
+            [
+                'nama' => 'Es Krim',
+                'harga' => 'Rp. 17.500',
+                'deskripsi' => 'Es krim menyegarkan dan sehat dengan menggunakan susu kambing',
+                'foto' => 'FOTO_PRODUK_Es Krim_f630904a40a5289b41364dd9717f4357.jpg',
             ],
         ];
         foreach($produk as $p){

@@ -53,6 +53,7 @@
                     <tbody>
                         @foreach($kontrak as $k)
                             <tr class="border-b dark:border-neutral-500">
+                                {{-- @dd($k) --}}
                                 @if ($k->status == 0)
                                     <td>
                                         <span

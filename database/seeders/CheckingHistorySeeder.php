@@ -17,14 +17,15 @@ class CheckingHistorySeeder extends Seeder
     {
         $kambing = Kambing::all()->pluck('id');
         $inspektur = Inspektur::all()->pluck('id');
+        $history  = ['5cps _ Landscape wallpaper, Scenery wallpaper, Scenery.jpeg', 'download.jpeg', 'India_Farming.jpg'];
 
-        for($i = 0; $i < 500; $i++) {
+        for($i = 0; $i < 100; $i++) {
             CheckingHistory::create([
                 'kambing_id' => $kambing[array_rand($kambing->toArray())],
                 'inspektur_id' => $inspektur[array_rand($inspektur->toArray())],
                 'status' => array_rand([0, 1]),
                 'keterangan' => fake()->sentence(),
-                'foto' => fake()->imageUrl(),
+                'foto' => $history[array_rand($history)],
             ]);
         }
     }

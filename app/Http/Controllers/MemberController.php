@@ -95,8 +95,7 @@ class MemberController extends BaseController
 
     public function kontrak() {
         $kambingDetail = new KambingDetail();
-        $kontrak = $kambingDetail->select('file_kontrak', 'file_kontrak_signed')->distinct()->where('member_id', session('id_user'))->orderBy('file_kontrak_signed', 'asc')->get();
-
+        $kontrak = $kambingDetail->select('status', 'file_kontrak', 'file_kontrak_signed')->distinct()->where('member_id', session('id_user'))->orderBy('file_kontrak_signed', 'asc')->get();
 
         return view('member.kontrak', [
             'title' => 'Detail Kontrak',

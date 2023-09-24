@@ -13,7 +13,7 @@ class KambingSeeder extends Seeder
      */
     public function run(): void
     {
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 20; $i++) {
             Kambing::create([
                 'gender' => array_rand([0, 1]),
                 'tanggal_lahir' => fake()->dateTimeBetween('-15 years', '-1 week'),
